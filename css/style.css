@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: lightpink;
+}
+
+header{
+    width: 100vw;
+    height: 15rem;
+    background: #F4E4DC;
+    display: flex;
+    align-items: space-between;
+    padding: 2rem;
+}
+
+header > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30rem;
+}
+
+h1{
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+header > img{
+    width: 12rem;
+    height: 60%;
+    object-fit: contain;
+    margin: 1rem;
+    background: lightgreen;
+}
+
+nav{
+    width: 60vw;
+    height: 100%;
+    margin: 0 auto;
+}
+
+nav > ul{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+nav > ul > li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
