@@ -8,26 +8,32 @@ html{
     font-size: 62.5%;
 }
 
+:root{
+    --background-body: #FCF8F6;
+    --background-theme: #F4E4DC;
+}
+
 body{
-    background: lightpink;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    background: var(--background-body);
 }
 
 header{
     width: 100vw;
-    height: 15rem;
-    background: #F4E4DC;
+    height: 12rem;
+    background: var(--background-header);
     display: flex;
-    align-items: space-between;
     padding: 2rem;
 }
 
-header > div{
+header > .logo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 30rem;
 }
 
 h1{
@@ -36,11 +42,7 @@ h1{
     font-weight: 300;
 }
 
-header > img{
-    width: 12rem;
-    height: 60%;
-    object-fit: contain;
-    margin: 1rem;
+header > .logoImg{
     background: lightgreen;
 }
 
@@ -67,4 +69,168 @@ nav > ul > li{
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+}
+
+.webshopSlogan{
+    height: 40rem;
+    width: 100vw;
+    background: lightblue;
+    position: relative;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.container > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container > article{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    background: var(--background-theme);
+    height: 12rem;
+    width: 30rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.container > article > button{
+    width: 8rem;
+    height: 4rem;
+
+}
+
+.shopWelcome{
+    height: 50rem;
+    width: 100vw;
+    padding: 4rem;
+    background: lightcoral;
+    display: flex;
+}
+
+.shopWelcome > img{
+    width: 20rem;
+    background: lightgrey;
+}
+
+.shopWelcome > article> figure> img{
+    height: 100%;
+    width: 40%;
+    background: lightyellow;
+}
+
+.pictures{
+    height: 40rem;
+    width: 100vw;
+    background: lightgray;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.pictures > img{
+    width: 15rem;
+    height: 30rem;
+    object-fit: fill;
+    background: lightskyblue;
+}
+
+.pictures > img:hover{
+    scale: 1.2;
+}
+
+
+.importantPoints{
+    height: 60rem;
+    width: 100vw;
+    background: var(--background-theme);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.importantPoints > div{
+    width: 40rem;
+    height: 20rem;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2rem;
+}
+
+.featureItem{
+    background: lightcyan;
+    height: 40rem;
+    width: 100vw;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.featureItem > figure{
+    background: lightsalmon;
+    width: 50rem;
+    height: 100%;
+}
+
+.reviews{
+    background: lightgoldenrodyellow;
+    height: 50rem;
+    width: 100vw;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.reviews > article{
+    height: 40rem;
+    width: 30rem;
+    background: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    height: 20rem;
+    width: 100vw;
+    display: flex;
+    padding: 2rem;
+    background: var(--background-theme);
+}
+
+footer > .developer{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+footer > .socials{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
 }
