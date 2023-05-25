@@ -23,7 +23,7 @@ body{
 header{
     width: 100vw;
     height: 12rem;
-    background: var(--background-header);
+    background: var(--background-theme);
     display: flex;
     padding: 2rem;
 }
@@ -69,6 +69,11 @@ nav > ul > li{
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+    
+}
+
+nav > ul > li > a{
+    text-decoration: none;
 }
 
 .webshopSlogan{
@@ -116,38 +121,36 @@ nav > ul > li{
     padding: 4rem;
     background: lightcoral;
     display: flex;
+    justify-content: center;
+    
+    gap: 2rem;
 }
 
-.shopWelcome > img{
+.shopWelcome  img{
+    height: 40rem;
     width: 20rem;
-    background: lightgrey;
-}
-
-.shopWelcome > article> figure> img{
-    height: 100%;
-    width: 40%;
+    object-fit: fill;
     background: lightyellow;
 }
 
-.pictures{
+.categories{
     height: 40rem;
     width: 100vw;
-    background: lightgray;
     padding: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
+    
 }
 
-.pictures > img{
+.categories > img{
     width: 15rem;
     height: 30rem;
-    object-fit: fill;
-    background: lightskyblue;
+    border-radius: 0.5rem;
 }
 
-.pictures > img:hover{
+.categories > img:hover{
     scale: 1.2;
 }
 
@@ -175,7 +178,6 @@ nav > ul > li{
 }
 
 .featureItem{
-    background: lightcyan;
     height: 40rem;
     width: 100vw;
     padding: 4rem;
@@ -186,7 +188,6 @@ nav > ul > li{
 }
 
 .featureItem > figure{
-    background: lightsalmon;
     width: 50rem;
     height: 100%;
 }
