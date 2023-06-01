@@ -23,7 +23,7 @@ body{
 header{
     width: 100vw;
     height: 12rem;
-    background: var(--background-theme);
+    background: white;
     display: flex;
     padding: 2rem;
 }
@@ -39,7 +39,8 @@ header > .logo{
 h1{
     font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    color: #E0C1C5;
 }
 
 header > .logoImg{
@@ -74,6 +75,15 @@ nav > ul > li{
 
 nav > ul > li > a{
     text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+main{
+    position: relative;
 }
 
 .webshopSlogan{
@@ -98,49 +108,83 @@ nav > ul > li > a{
     position: absolute;
     top: 40%;
     left: 10%;
-    background: var(--background-theme);
     height: 12rem;
     width: 30rem;
-    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     gap: 2rem;
     flex-wrap: wrap;
+    color: white;
 }
 
 .container > article > button{
-    width: 8rem;
+    width: 20rem;
     height: 4rem;
-
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    background: black;
+    color: white;
+    border: none;
 }
 
-.shopWelcome{
-    height: 50rem;
+.btn:hover{
+    cursor: pointer;
+    border: 0.3rem solid white;
+}
+
+.heroSection{
     width: 100vw;
     padding: 4rem;
-    background: lightcoral;
+    background: var(--background-theme);
     display: flex;
-    justify-content: center;
-    
-    gap: 2rem;
+    justify-content: center; 
+    gap: 10rem;
 }
 
-.shopWelcome  img{
+.heroSection img{
     height: 40rem;
-    width: 20rem;
     object-fit: fill;
     background: lightyellow;
 }
 
+.heroSection__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem
+}
+
+.heroSection__text h2{
+    display: flex;
+    justify-content: center;
+}
+
+.heroSection__text button{
+    width: 20rem;
+    height: 5rem;
+    background: black;
+    color: white;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.heroSection__text button:hover{
+    cursor: pointer;
+    border: 0.3rem solid white;
+}
+
 .categories{
-    height: 40rem;
     width: 100vw;
     padding: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
+    flex-wrap: wrap;
     
 }
 
@@ -154,10 +198,9 @@ nav > ul > li > a{
     scale: 1.2;
 }
 
-
 .importantPoints{
-    height: 60rem;
     width: 100vw;
+    padding: 4rem;
     background: var(--background-theme);
     display: flex;
     justify-content: center;
@@ -169,16 +212,17 @@ nav > ul > li > a{
 .importantPoints > div{
     width: 40rem;
     height: 20rem;
-    background: lightblue;
+    background: var(--background-body);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 2rem;
+    padding: 2rem;
+    gap: 0.5rem;
 }
 
 .featureItem{
-    height: 40rem;
     width: 100vw;
     padding: 4rem;
     display: flex;
@@ -187,13 +231,38 @@ nav > ul > li > a{
     gap: 10rem;
 }
 
-.featureItem > figure{
-    width: 50rem;
-    height: 100%;
+.featureItem article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.featureItem__button{
+    width: 20rem;
+    height: 5rem;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 2rem;
+}
+
+.featureItem__button:hover{
+    border: 1rem solid white;
+}
+
+.featureItem h2{
+    font-size: 200%;
+}
+
+.featureItem img{
+    width: 40rem;
+    object-fit: contain;
 }
 
 .reviews{
-    background: lightgoldenrodyellow;
+    background: var(--background-theme);
     height: 50rem;
     width: 100vw;
     padding: 4rem;
@@ -212,26 +281,132 @@ nav > ul > li > a{
     align-items: center;
 }
 
+/* Product Overview*/
+.productOverview{
+    display: flex;
+}
+
+.filter--inputs{
+    padding: 4rem;
+    display: flex;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 20vw
+}
+
+.filter{
+    
+}
+
+.label{
+
+}
+
+.products{
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.product{
+    list-style: none;
+    width: 25rem;
+    height: 30rem;
+}
+
+.product:hover{
+    transform: scale(1.02) translateY(-0.7rem);
+    cursor: pointer;
+}
+
+.product img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.shoppingCart{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    background: lightcoral;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
 footer{
-    height: 20rem;
     width: 100vw;
     display: flex;
-    padding: 2rem;
-    background: var(--background-theme);
+    padding: 4rem;
 }
 
-footer > .developer{
-    width: 50%;
+.footer-logo{
+    width: 20vw;
+    padding: 2rem;
+}
+
+.shop{
+    width: 40vw;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 2rem;
+}
+
+.shop a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    
+}
+
+.shop__products{
+    width: 20rem;
+    height: 5rem;
+    color: white;
+    text-decoration: none;
+    background: black;
+    
+}
+
+.shop__products a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop a:hover{
+    cursor: pointer;
+}
+
+.shop a:visited{
+    color: white;
+}
+
+.shop ul{
+    list-style: none;
+}
+
+.developer{
+    width: 40vw;
+    display: flex;
     align-items: flex-start;
     flex-direction: column;
+    padding: 4rem;
+    gap: 2rem;
 }
 
-footer > .socials{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
+.developer ul{
+    list-style: none;
 }

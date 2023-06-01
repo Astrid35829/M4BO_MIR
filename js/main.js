@@ -1,1 +1,2 @@
-console.log("wtf have i done");
+let products = document.getElementsByClassName("product");
+let filters = document.getElementsByClassName("filter");    

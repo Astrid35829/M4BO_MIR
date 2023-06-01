@@ -18,7 +18,7 @@
 <body>
     <header>
         <section class="logo">
-            <img src="img/M4BO MIR LOGO.png" alt="Stitch and Loop initials logo" class="logoImg">
+            <img src="img/BoLogo.webp" alt="Stitch and Loop initials logo" class="logoImg">
             <h1>Stitches and Loops</h1>
         </section>
         <nav>
@@ -32,7 +32,41 @@
         </nav>
     </header>
     <main>
-        <section class="filter"></section>
+        <div class="productOverview">
+            <!--Filter inputs-->
+        <section class="filter--inputs">
+            <h3>Categories</h3>
+            <div>
+                <input id="checkbox-mediumPlush" type="checkbox" class="filter">
+                <label for="checkbox-mediumPlush" class="label">Medium sized plush</label>
+            </div>
+            <div>
+                <input id="checkbox-smallPlush" type="checkbox" class="filter">
+                <label for="checkbox-smallPlush" class="label">Small sized plush</label>
+            </div>
+            <div>
+                <input id="checkbox-keychain" type="checkbox" class="filter">
+                <label for="checkbox-keychain" class="label">Keychain</label>
+            </div>
+        </section>
+        <!--Products-->
+        <ul class="products">
+            <li class="product" data-category="keychain"><h4>Bulbasaur</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="smallPlush"><h4>Charmander</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="keychain"><h4>Chicken</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="smallPlush"><h4>Giraffe</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="mediumPlush"><h4>Lamb</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="smallPlush"><h4>Mushroom</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="mediumPlush"><h4>Rose Turtle</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="smallPlush"><h4>Sailboat</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="keychain"><h4>Squid</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="keychain"><h4>Squid With Hat</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="smallPlush"><h4>Squirtle</h4><img src="img/squirrelBO.webp" alt=""></li>
+            <li class="product" data-category="smallPlush"><h4>Squirrel</h4><img src="img/squirrelBO.webp" alt="Small crocheted squirrel"></li>0
+        </ul>
+        <button class="shoppingCart"></button>
+        </div>
+        
     </main>
     <footer>
         <!-- DEVELOPER-->
@@ -50,6 +84,7 @@
             <button class="email">Email</button>
             <a class="insta" href="https://www.instagram.com/stitches.and_loops/">Instagram</a>
         </section>
+        
     </footer>
 </body>
 </html>

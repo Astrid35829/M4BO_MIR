@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    
+    <script src="https://kit.fontawesome.com/df78193d73.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
     <title>Stitches and Loops</title>
@@ -16,7 +17,7 @@
 <body>
     <header>
         <section class="logo">
-            <img src="img/M4BO MIR LOGO.png" alt="Stitch and Loop initials logo" class="logoImg">
+            <img src="img/BoLogo.webp" alt="Stitch and Loop initials logo" class="logoImg">
             <h1>Stitches and Loops</h1>
         </section>
         <nav>
@@ -24,8 +25,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="productOverview1.html">Product Overview 1</a></li>
                 <li><a href="productOverview2.html">Product Overview 2</a></li>
-                <li>About</li>
-                <li>Cart</li>
             </ul>
         </nav>
     </header>
@@ -35,21 +34,23 @@
             <div class="container">
                 <img src="img/Placeholder_flowers.jpg" alt="Purple flowers">
                 <article>
-                    <h2>Slogan Webshop</h2>
-                    <button class="btn">Shop</button>
+                    <h2>Made To Love</h2>
+                    <button class="btn">Shop Now!</button>
                 </article>
               </div>
         </section>
         <!-- ???-->
-        <section class="shopWelcome">
+        <section class="heroSection">
                 <figure>
-                    <img src="img/squirrelBO" alt="">
+                    <img src="img/squirrelBo.webp" alt="">
                 </figure>
-                <div>
-                    <h2>Een Grote Heading</h2>
-                    <p>Dit is een tekst die de user interresant vindt</p>
-                    <button>Button</button>
-                </div>
+                <article class="heroSection__text">
+                    <h2>Cute and Small</h2>
+                    <p>
+                        Made 100% from cotton and wool, our small items are perfect as a gift for that special someone.
+                    </p>
+                    <button class="button__herosection">Shop Here</button>
+                </article>
         </section>
         <!-- CATEGORIES-->
         <section class="categories"> 
@@ -62,68 +63,124 @@
         <!--Add custom background-->
         <section class="importantPoints">
             <div class="firstStep">
-                <img src="" alt="">
-                <h3>De eerste stap</h3>
-                <p>Something something</p>
+                <h3>Sustainability</h3>
+                <i class="fa-solid fa-leaf"></i>
+                <center>Most of our products use 100% cotton and wool</center>
             </div>
             <div class="secondStep">
-                <img src="" alt="">
-                <h3>De tweede stap</h3>
-                <p>Something else something else</p>
+                <h3>Handcrafted</h3>
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <center>Everything offered is handcrafted</center>
             </div>
             <div class="thirdStep">
-                <img src="" alt="">
-                <h3>De derde stap</h3>
-                <p>Else else</p>
+                <h3>Small Business</h3>
+                <i class="fa-solid fa-person-dress"></i>
+                <center>One man Small Business</center>
             </div>
             <div class="fourthStep">
-                <img src="" alt="">
-                <h3>De vierde stap</h3>
-                <p>Else someting else something</p>
+                <h3>Located in the Netherlands</h3>
+                <i class="fa-solid fa-location-dot"></i>
+                <center>Dutch and English spoken while based in the Netherlands</center>
             </div>
         </section>
         <!-- PRODUCT SPOTLIGHT-->
         <section class="featureItem">
             <article>
-                <h2>Featured Item</h2>
-                <p>Informatie</p>
+                <h2>Feature Item</h2>
+                <h3>Cute Small Mushroom</h3>
+                <center>Pattern from mummajcrochet. Made from 100% cotton and wool</center>
+                <button class="featureItem__button">Shop Here</button>
             </article>
-            <figure>
-                <img src="" alt="">
-            </figure>
+            <img src="img/squirrelBO.webp" alt="">
         </section>
-        <!-- REVIEWS-->
-        <section class="reviews">
-            <article>
-                <img src="" alt="">
-                <p>something something</p>
-            </article>
-            <article>
-                <img src="" alt="">
-                <p>something else something else</p>
-            </article>
-            <article>
-                <img src="" alt="">
-                <p>Else else</p>
-            </article>
+        <section>
+            <button class="arrow"><</button>
+            <ul class="reviews">
+                <li class="review">
+                    <figure class="quote">"Totally love this product"</figure>
+                    <div class="stars">&#9733;
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                        &#9733;
+                    </div>
+                    <img src="" alt="">
+                    <p>Milou Kanagawa</p>
+                </li>
+                <li class="review">
+                    <figure class="quote"></figure>
+                    <div class="stars"></div>
+                    <p></p>
+                </li>
+                <li class="review">
+                    <figure class="quote"></figure>
+                    <div class="stars"></div>
+                    <p></p>
+                </li>
+                <li class="review">
+                    <figure class="quote"></figure>
+                    <div class="stars"></div>
+                    <p></p>
+                </li>
+                <li class="review">
+                    <figure class="quote"></figure>
+                    <div class="stars"></div>
+                    <p></p>
+                </li>
+                <li class="review">
+                    <figure class="quote"></figure>
+                    <div class="stars"></div>
+                    <p></p>
+                </li>
+            </ul>
         </section>
     </main>
     <footer>
         <!-- DEVELOPER-->
-        <section class="developer">
-            <img src="" alt="Logo from the programmer Astrid Prins">
-            <h3>Developer</h3>
-            <h2>Astrid Prins</h2>
-            <h3>Student Software Development MBO4</h3>
-            <a class="linkedin" href="">Linkedin</a>
-            <a class="github" href="https://github.com/Astrid35829">Github</a>
+        <section class="footer-logo">
+            <img src="img/BoLogo.webp" alt="Stitch and Loop initials logo" class="logoImg">
+            <h1>Stitches and Loops</h1>
+            <i class="fa-brands fa-instagram fa-2xl" ></i>
+            <i class="fa-brands fa-youtube fa-2xl"></i>
+            <i class="fa-brands fa-facebook fa-2xl"></i>
         </section>
-        <!-- WEBSITE FOOTER-->
-        <section class="socials">
-            <h2>Stitches and Loops</h2>
-            <button class="email">Email</button>
-            <a class="insta" href="https://www.instagram.com/stitches.and_loops/">Instagram</a>
+        <section class="shop">
+            <article>
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a></p>
+            </article>
+            <article class="shop__products">
+                <a href="productOverview1.html">Shop</a>
+            </article>
+            <article>
+                <h3>Over Stitches and Loops</h3>
+                <ul>
+                    <li>Stitches and Loops</li>
+                    <li>Over de producten</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Klantenservice</h3>
+                <ul>
+                    <li>Veelgestelde vragen</li>
+                    <li>betaalmethoden</li>
+                    <li>Algemen voorwaarden</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </article>
+        </section>
+        <section class="developer">
+            <article><h2>Web Developer</h2>
+                <h3>Astrid Prins</h3></article>
+            <article><h4>Socials</h3>
+                <ul>
+                    <li>Github</li>
+                    <li>Linkedin</li>
+                    <li>Email</li>
+                </ul>
+            </article>
         </section>
     </footer>
+    <footer>©Copyright 2023</footer>
 </body>
 </html>
