@@ -10,14 +10,15 @@ html{
 
 :root{
     --background-body: #FCF8F6;
-    --background-theme: #F4E4DC;
+    --background-theme: #fef3ee;
+    --background-hover: #E0C1C5;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: 300;
-    background: var(--background-body);
+    background: var(--background-theme);
 }
 
 header{
@@ -26,6 +27,7 @@ header{
     background: white;
     display: flex;
     padding: 2rem;
+    background: var(--background-body);
 }
 
 header > .logo{
@@ -34,6 +36,10 @@ header > .logo{
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.logoImg{
+    height: 80%;
 }
 
 h1{
@@ -62,9 +68,7 @@ nav > ul{
 nav > ul > li{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     font-size: 1.5rem;
     
 }
@@ -72,10 +76,15 @@ nav > ul > li{
 nav > ul > li > a{
     text-decoration: none;
     color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav > ul > li:hover{
-    background: var(--background-theme);
+    background: var(--background-hover);
 }
 
 nav > ul > li > a:visited{
@@ -89,7 +98,6 @@ main{
 .webshopSlogan{
     height: 40rem;
     width: 100vw;
-    background: lightblue;
     position: relative;
 }
 
@@ -292,27 +300,153 @@ main{
 
 .reviews{
     background: var(--background-theme);
-    height: 50rem;
     width: 100vw;
     padding: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    flex-wrap: wrap;
 }
 
-.reviews > article{
-    height: 40rem;
+.review{
     width: 30rem;
-    background: lightgreen;
+    background: var(--background-body);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    
     align-items: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.quote{
+    font-size: 300%;
+}
+
+.review p {
+    font-size: 150%;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+
+.review__pfp{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review__text{
+    padding-top: 2rem;
+    font-size: 90%;
+}
+
+.stars{
+    color: gold;
+}
+
+.review__product{
+    margin-top: 1rem;
+    width: 10rem;
+    height: 8rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
 }
 
 /* Product Overview*/
 .productOverview{
     display: flex;
+    height: auto;
+}
+
+.checkout{
+    width: 80rem;
+    background: var(--background-hover);
+    margin: 0 auto;    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    padding: 4rem;
+    gap: 2rem;
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    display: none;
+}
+
+.checkout__close{
+    width: 20rem;
+    height: 5rem;
+    background: black;
+    color: white;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.checkout__item{
+    width: 70rem;
+    height: 20rem;
+    padding: 2rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.checkout__item img{
+    height: 16rem;
+    width: 15rem;
+    object-fit: cover;
+}
+
+.checkout__total{
+    width: 70rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal{
+    width: 50rem;
+    height: 30rem;
+    position: fixed;
+    background: red;
+    top: 20%;
+    left: 35%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-body);
+    box-shadow:0 0 2rem 0 rgba(0, 0, 0, 0.3);
+    color: green;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.shoppingCart{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    background: black;
+    position: fixed;
+    top: 14rem;
+    right: 5rem;
+    color: white;
+}
+
+.shoppingCart:hover{
+    cursor: pointer;
+}
+
+.fa-bag-shopping{
+    color: white;
+    font-size: 200%;
 }
 
 .filter--inputs{
@@ -321,7 +455,7 @@ main{
     gap: 4rem;
     display: flex;
     flex-direction: column;
-    width: 20vw
+    width: 18vw;
 }
 
 .filter{
@@ -333,20 +467,25 @@ main{
 }
 
 .products{
-    width: 70vw;
+    width: 72vw;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    padding: 2rem;
 }
 
 .product{
     list-style: none;
     width: 25rem;
     height: 30rem;
-    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .product:hover{
@@ -354,42 +493,69 @@ main{
     cursor: pointer;
 }
 
-.product img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0.5rem;
+.product h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.shoppingCart{
-    width: 5rem;
+.product figure{
+    width: 20rem;
+    height: 20rem;
+}
+
+.product__image{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    object-fit: cover;
+}
+
+.product div{
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.product__addCart{
+    width: 20rem;
     height: 5rem;
-    border-radius: 50%;
+    background: black;
+    color: white;
     border: none;
-    background: lightcoral;
-    position: absolute;
-    top: 3%;
-    right: 3%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.product__addCart:hover{
+    background: var(--background-hover);
+    cursor: pointer;
 }
 
 footer{
     width: 100vw;
     display: flex;
     padding: 4rem;
+    flex-wrap: wrap;
+    background: var(--background-body);
 }
 
 .footer-logo{
     width: 20vw;
-    padding: 2rem;
+}
+
+.footer-logo img{
+    width: 80%;
+    height: 20%;
 }
 
 .shop{
-    width: 40vw;
+    width: 30vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 4rem;
-    gap: 2rem;
+    gap: 4rem;
+    
 }
 
 .shop a{

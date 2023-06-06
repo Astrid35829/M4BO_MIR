@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    
+    <script src="https://kit.fontawesome.com/df78193d73.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
@@ -30,67 +30,236 @@
         </nav>
     </header>
     <main>
-        <div class="productOverview">
-            <!--Filter inputs-->
-        <section class="filter--inputs">
-            <h3>Categories</h3>
-            <div>
-                <input id="checkbox-productPage" type="checkbox" class="filter">
-                <label for="checkbox-productPage" class="label">With Product Page</label>
+        <section id="js--checkoutWindow" class="checkout">
+            <div class="checkout__item">
+                <img src="img/mushroomPink.webp" alt="" class="checktout__img">
+                <p class="checkout__title">Small Pink Mushroom</p>
+                <p id="js--amount-mushroom">0</p>
+                <p>€</p>
+                <p id="js--price1">0</p>
             </div>
-            <div>
-                <input id="checkbox-largePlush" type="checkbox" class="filter">
-                <label for="checkbox-largePlush" class="label">Large sized plush</label>
+            <div class="checkout__item">
+                <img src="img/sailboat.webp" alt="" class="checktout__img">
+                <p class="checkout__title">Small Blue Sailboat</p>
+                <p id="js--amount-sailboat">0</p>
+                <p>€</p>
+                <p id="js--price2">0</p>
             </div>
-            <div>
-                <input id="checkbox-mediumPlush" type="checkbox" class="filter">
-                <label for="checkbox-mediumPlush" class="label">Medium sized plush</label>
+            <div class="checkout__item">
+                <img src="img/squidHat.webp" alt="" class="checktout__img">
+                <p class="checkout__title">Keychain Squid With Hat</p>
+                <p id="js--amount-squid">0</p>
+                <p>€</p>
+                <p id="js--price3">0</p>
             </div>
-            <div>
-                <input id="checkbox-smallPlush" type="checkbox" class="filter">
-                <label for="checkbox-smallPlush" class="label">Small sized plush</label>
+            <div class="checkout__item">
+                <img src="img/lamb.webp" alt="" class="checktout__img">
+                <p class="checkout__title">Large Lamb</p>
+                <p id="js--amount-lamb">0</p>
+                <p>€</p>
+                <p id="js--price4">0</p>
             </div>
-            <div>
-                <input id="checkbox-keychain" type="checkbox" class="filter">
-                <label for="checkbox-keychain" class="label">Keychain</label>
+            <div class="checkout__total">
+                <p>Total:</p>
+                <p>€</p>
+                <p id="js--checkout-total">0</p>
             </div>
+            <button id="js--checkout__close" class="checkout__close">Close</button>
         </section>
-        <!--Products-->
-        <ul class="products">
-            <li class="product" data-category="keychain"><h4>Bulbasaur</h4><img src="img/bulbasaur.webp" alt=""></li>
-            <li class="product" data-category="mediumPlush"><h4>Cat-ctus</h4><img src="img/catctus.webp" alt=""></li>
-            <li class="product" data-category="smallPlush"><h4>Charmander</h4><img src="img/charmander.webp" alt=""></li>
-            <li class="product" data-category="keychain"><h4>Chicken</h4><img src="img/chicken.webp" alt=""></li>
-            <li class="product" data-category="smallPlush"><h4>Giraffe</h4><img src="img/giraffe.webp" alt=""></li>
-            <li class="product" data-category="largePlush"><h4>Lamb</h4><img src="img/lamb.webp" alt=""></li>
-            <li class="product" data-category="smallPlush productPage"><h4>Mushroom</h4><img src="img/mushroom.webp" alt=""></li>
-            <li class="product" data-category="mediumPlush"><h4>Rose Turtle</h4><img src="img/roseTurtle.webp" alt=""></li>
-            <li class="product" data-category="smallPlush"><h4>Sailboat</h4><img src="img/sailboat.webp" alt=""></li>
-            <li class="product" data-category="keychain productPage"><h4>Squid</h4><img src="img/squidGreen.jpg" alt=""></li>
-            <li class="product" data-category="smallPlush"><h4>Squirtle</h4><img src="img/squirtle.webp" alt=""></li>
-            <li class="product" data-category="keychain"><h4>Koala</h4><img src="img/koala.webp" alt="Small crocheted squirrel"></li>
-        </ul>
-        <button class="shoppingCart"></button>
-        </div>
         
+        <article class="modal" id="js--shoppingModal">
+            Added to cart
+        </article>
+
+        <button id="js--checkoutButton" class="shoppingCart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p class="shoppingCart__message">0</p>
+        </button>
+        <div id="js--productoverview" class="productOverview">
+            <section class="filter--inputs">
+                <h3>Categories</h3>
+                <div>
+                    <input id="checkbox-productPage" type="checkbox" class="filter">
+                    <label for="checkbox-productPage" class="label">Interative Items</label>
+                </div>
+                <div>
+                    <input id="checkbox-largePlush" type="checkbox" class="filter">
+                     <label for="checkbox-largePlush" class="label">Large sized plush</label>
+                </div>
+                <div>
+                    <input id="checkbox-mediumPlush" type="checkbox" class="filter">
+                    <label for="checkbox-mediumPlush" class="label">Medium sized plush</label>
+                </div>
+                <div>
+                    <input id="checkbox-smallPlush" type="checkbox" class="filter">
+                    <label for="checkbox-smallPlush" class="label">Small sized plush</label>
+                </div>
+                <div>
+                    <input id="checkbox-keychain" type="checkbox" class="filter">
+                    <label for="checkbox-keychain" class="label">Keychain</label>
+                </div>
+            </section>
+
+                <ul class="products">
+                    <li class="product" data-category="keychain">
+                        <figure>
+                            <img class="product__image" src="img/bulbasaur.webp" alt="Keychain sized crocheted Bulbasaur">
+                        </figure>
+                        <h4>Bulbasaur</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>10</p>
+                        </div>
+                        <button class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="mediumPlush">
+                        <img class="product__image" src="img/catctus.webp" alt="Medium sized crocheted cactus with cat ears">
+                        <h4>Cat-ctus</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>15</p>
+                        </div>
+                        <button class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="smallPlush">
+                        <img class="product__image" src="img/charmander.webp" alt="Small sized crocheted Charmander">
+                        <h4>Charmander</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>10</p>
+                        </div>
+                        <button class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="keychain">
+                        <img class="product__image" src="img/chicken.webp" alt="Keychain sized crocheted redbrown chicken">
+                        <h4>Chicken</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>6</p>
+                        </div>
+                        <button class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="smallPlush">
+                        <img class="product__image" src="img/giraffe.webp" alt="Small sized crocheted giraffe">
+                        <h4>Giraffe</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>10</p>
+                        </div>
+                        <button class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="largePlush">
+                        <img class="product__image" src="img/lamb.webp" alt="Large sized crocheted lamb">
+                        <h4>Lamb</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>20</p>
+                        </div>
+                        <button data-product="lamb" class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="smallPlush productPage">
+                            <img class="product__image" src="img/mushroom.webp" alt="Small sized crocheted blue mushroom">
+                            <h4>Blue Mushroom</h4>
+                            <div>
+                                <p>	&#x20AC;</p>
+                                <p>10</p>
+                            </div>
+                        <button data-product="mushroom"class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="mediumPlush">
+                        <img class="product__image" src="img/roseTurtle.webp" alt="Medium sized crocheted purple rose turtle">
+                        <h4>Rose Turtle</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>15</p>
+                        </div>
+                        <button class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="smallPlush">
+                        <img class="product__image" src="img/sailboat.webp" alt="Small sized crocheted blue sailboat">
+                        <h4>Sailboat</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>10</p>
+                        </div>
+                        <button data-product="sailboat" class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="keychain productPage">
+                        <img class="product__image" src="img/squidGreen.jpg" alt="Keychain sized crocheted green squid">
+                        <h4>Squid</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>6</p>
+                        </div>
+                        <button data-product="squid" class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="smallPlush">
+                        <img class="product__image" src="img/squirtle.webp" alt="Small sized crocheted Squirtle">
+                        <h4>Squirtle</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>10</p>
+                        </div>
+                        <button class="product__addCart">Add to cart</button>
+                    </li>
+                    <li class="product" data-category="keychain">
+                        <img class="product__image" src="img/koala.webp" alt="Keychain sized crocheted koala">
+                        <h4>Koala</h4>
+                        <div>
+                            <p>	&#x20AC;</p>
+                            <p>6</p>
+                        </div>
+                        <button class="product__addCart">Add to cart</button>
+                    </li>
+                </ul>
+        </div>
     </main>
     <footer>
         <!-- DEVELOPER-->
+        <section class="footer-logo">
+            <img src="img/BoLogo.webp" alt="Stitch and Loop initials logo" class="logoImg">
+            <h1>Stitches and Loops</h1>
+            <i class="fa-brands fa-instagram fa-2xl" ></i>
+            <i class="fa-brands fa-youtube fa-2xl"></i>
+            <i class="fa-brands fa-facebook fa-2xl"></i>
+        </section>
+        <section class="shop">
+            <article>
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a></p>
+            </article>
+            <article class="shop__products">
+                <a href="productOverview1.html">Shop</a>
+            </article>
+            <article>
+                <h3>Over Stitches and Loops</h3>
+                <ul>
+                    <li>Stitches and Loops</li>
+                    <li>Over de producten</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Klantenservice</h3>
+                <ul>
+                    <li>Veelgestelde vragen</li>
+                    <li>betaalmethoden</li>
+                    <li>Algemen voorwaarden</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </article>
+        </section>
         <section class="developer">
-            <img src="" alt="Logo from the programmer Astrid Prins">
-            <h3>Developer</h3>
-            <h2>Astrid Prins</h2>
-            <h3>Student Software Development MBO4</h3>
-            <a class="linkedin" href="">Linkedin</a>
-            <a class="github" href="https://github.com/Astrid35829">Github</a>
+            <article><h2>Web Developer</h2>
+                <h3>Astrid Prins</h3></article>
+            <article><h4>Socials</h3>
+                <ul>
+                    <li>Github</li>
+                    <li>Linkedin</li>
+                    <li>Email</li>
+                </ul>
+            </article>
         </section>
-        <!-- WEBSITE FOOTER-->
-        <section class="socials">
-            <h2>Stitches and Loops</h2>
-            <button class="email">Email</button>
-            <a class="insta" href="https://www.instagram.com/stitches.and_loops/">Instagram</a>
-        </section>
-        
     </footer>
+    <footer>©Copyright 2023</footer>
 </body>
 </html>
