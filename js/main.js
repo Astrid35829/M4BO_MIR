@@ -1,3 +1,103 @@
+//filter
+let allProduct = document.getElementsByClassName("product");
+let filters = document.getElementsByClassName("filter");
+
+for(let i = 0; i < filters.length; i++){
+    filters[i].checked = true;
+}
+
+/*
+let interactive = document.getElementById("checkbox-interactive");
+interactive.onchange = function(){
+    if(interactive.checked === true){
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "interactive"){
+                allProduct[i].style.display = "block";
+            }
+        }
+    }
+    else{
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "interactive"){
+                allProduct[i].style.display = "none";
+            }
+        }
+    }
+}
+*/
+
+let keychain = document.getElementById("checkbox-keychain");
+keychain.onchange = function(){
+    if(keychain.checked === true){
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "keychain"){
+                allProduct[i].style.display = "block";
+            }
+        }
+    }
+    else{
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "keychain"){
+                allProduct[i].style.display = "none";
+            }
+        }
+    }
+}
+
+let mediumPlush = document.getElementById("checkbox-mediumPlush");
+mediumPlush.onchange = function(){
+    if(mediumPlush.checked === true){
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "mediumPlush"){
+                allProduct[i].style.display = "block";
+            }
+        }
+    }
+    else{
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "mediumPlush"){
+                allProduct[i].style.display = "none";
+            }
+        }
+    }
+}
+
+let smallPlush = document.getElementById("checkbox-smallPlush");
+smallPlush.onchange = function(){
+    if(smallPlush.checked === true){
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "smallPlush"){
+                allProduct[i].style.display = "block";
+            }
+        }
+    }
+    else{
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "smallPlush"){
+                allProduct[i].style.display = "none";
+            }
+        }
+    }
+}
+
+let largePlush = document.getElementById("checkbox-largePlush");
+largePlush.onchange = function(){
+    if(largePlush.checked === true){
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "largePlush"){
+                allProduct[i].style.display = "block";
+            }
+        }
+    }
+    else{
+        for(let i = 0; i < allProduct.length; i++){
+            if(allProduct[i].dataset.category === "largePlush"){
+                allProduct[i].style.display = "none";
+            }
+        }
+    }
+}
+
 // Shoppingcart button
 const addToCartButton = document.getElementsByClassName("product__addCart");
 let cartMessage = 0;
@@ -44,11 +144,10 @@ const checkoutClose = document.getElementById("js--checkout__close");
 const mainWindow = document.getElementById("js--productoverview");
 let checkoutOpen = false;
 
-
-
 checkoutButton.onclick = function(){
     console.log("click");
     if(checkoutOpen === false){
+        document.querySelector("main").style.height = "100rem";
         mainWindow.style.display = "none";
         checkoutWindow.style.display = "block";
         checkoutOpen = true;
@@ -70,7 +169,22 @@ checkoutButton.onclick = function(){
 }
 
 checkoutClose.onclick = function(){
+    document.querySelector("main").style.height = "";
     checkoutWindow.style.display = "none";
     mainWindow.style.display = "flex";
     checkoutOpen = false;
 }
+
+
+//json
+const picture = document.getElementById("js--img");
+const price = document.getElementById("js--text");
+let data = fetch("js/producten.js").then(
+    function(binnenGekomenData){
+        return binnenGekomenData.json();
+    }).then(
+        function(echteData){
+            picture.setAttribute("src", echteData.img);
+            price.innerHTML = echteData.text;
+        }
+);
