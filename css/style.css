@@ -30,11 +30,10 @@ header{
     background: var(--background-body);
 }
 
-header > .logo{
+.logo{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     height: 100%;
 }
 
@@ -44,7 +43,7 @@ header > .logo{
 }
 
 .logoImg{
-    height: 80%;
+    height: 5rem;
 }
 
 h1{
@@ -52,6 +51,9 @@ h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #E0C1C5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav{
@@ -73,9 +75,7 @@ nav > ul{
 nav > ul > li{
     width: 100%;
     height: 100%;
-    
     font-size: 1.5rem;
-    
 }
 
 nav > ul > li > a{
@@ -152,6 +152,7 @@ main{
 
 .heroSection{
     width: 100vw;
+    height: auto;
     padding: 4rem;
     background: var(--background-theme);
     display: flex;
@@ -210,30 +211,33 @@ main{
 }
 
 .categories div{
-    width: 15rem;
-    height: 30rem;
+    padding: 2rem;
 }
 
 .categories img{
-    width: 100%;
-    height: 100%;
+    height: 20rem;
+    width: 15rem;
     border-radius: 0.5rem;
     object-fit: cover;
+    margin-bottom: 2rem;
 }
 
-.large{
-    width: 5rem;
-    height: 3rem;
-}
-
-.categories div a{
+.categories a{
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .categories  img:hover{
-    scale: 1.2;
     cursor: pointer;
+}
+
+.categories a:visited{
+    color: black;
 }
 
 .importantPoints{
@@ -247,8 +251,8 @@ main{
     flex-wrap: wrap;
 }
 
-.importantPoints > div{
-    width: 40rem;
+.points_card{
+    width: 50rem;
     height: 20rem;
     background: var(--background-body);
     display: flex;
@@ -364,6 +368,7 @@ main{
     object-fit: cover;
 }
 
+
 /* Product Overview*/
 .productOverview{
     display: flex;
@@ -380,7 +385,7 @@ main{
     gap: 2rem;
     position: absolute;
     top: 0%;
-    left: 20%;
+    left: 25%;
     display: none;
 }
 
@@ -502,7 +507,7 @@ main{
 .product{
     list-style: none;
     width: 25rem;
-    height: 30rem;
+    height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -530,7 +535,7 @@ main{
 .product__image{
     width: 20rem;
     height: 15rem;
-    padding: 1rem;
+    
     object-fit: cover;
 }
 
@@ -541,6 +546,90 @@ main{
     align-items: center;
     justify-content: center;
     padding-bottom: 1rem;
+}
+
+.product__variants{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.product__variant{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    list-style: none;
+    margin-bottom: 1rem;
+    border: 0.2rem solid black;
+}
+
+.variant__bulb{
+    background: rgb(16, 192, 119);
+}
+
+.variant__catctus{
+    background: linear-gradient(rgb(78, 189, 78),30%, rgb(62, 181, 221));
+}
+
+.variant__char{
+    background: orange;
+}
+
+.variant__chick{
+    background: rgb(180, 97, 46);
+}
+
+.variant__gir{
+    background: rgb(246, 246, 142);
+}
+
+.variant__lamb{
+    background: linear-gradient(rgb(93, 179, 245),20%,rgb(195, 106, 220), 50%, rgb(203, 198, 180));
+}
+
+.variant__mush1{
+    background: lightskyblue;
+    border: none;
+}
+
+.variant__mush2{
+    background: rgb(99, 208, 99);
+    border: none;
+}
+
+.variant__mush3{
+    background: rgb(255, 145, 202);
+}
+
+.variant__turtle{
+    background: linear-gradient(rgb(199, 111, 224), rgb(104, 203, 104));
+}
+
+.variant__sail{
+    background: linear-gradient(white, lightskyblue);
+}
+
+.variant__squid1{
+    background: rgb(138, 203, 40);
+    border: none;
+}
+
+.variant__squid2{
+    background: purple;
+    border: none;
+}
+
+.variant__squid3{
+    background: linear-gradient(lightgreen, 30%, green, 40%,  pink);
+}
+
+.variant__squirtle{
+    background: lightblue;
+}
+
+.variant__koala{
+    background: lightgray;
 }
 
 .buttons{
@@ -558,6 +647,8 @@ main{
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     text-decoration: none;
+    font-size: 90%;
+    padding: 0.2rem;
 }
 
 .product__addCart{
@@ -585,25 +676,132 @@ main{
     cursor: pointer;
 }
 
+.product__amount{
+    font-size: 80%;
+    margin-top: 0.5rem;
+}
+
+/* Productpagina*/
+.productPagina__mushroom{
+    width: 100vw;
+    height: auto;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mushroom__image{
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+}
+
+.mushroom__heading{
+    display: flex;
+    gap: 4rem;
+    padding: 4rem;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.mushroom__info{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.mushroom__variants{
+    display: flex;
+    gap: 4rem;
+}
+
+.mushroom__variant{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    list-style: none;
+}
+
+.mushroom__variant:hover{
+    cursor: pointer;
+}
+
+.mushroom__color1{
+    background: lightskyblue;
+    border: none;
+}
+
+.mushroom__color2{
+    background: rgb(99, 208, 99);
+    border: none;
+}
+
+.mushroom__color3{
+    background: rgb(255, 145, 202);
+    border: none;
+}
+
+.mushroom__price{
+    font-size: 200%;
+}
+
 footer{
     width: 100vw;
     display: flex;
-    padding: 4rem;
     flex-wrap: wrap;
     background: var(--background-body);
+    justify-content: center;
 }
 
-.footer-logo{
-    width: 20vw;
+.footer__logo{
+    padding: 4rem;
 }
 
-.footer-logo img{
-    width: 80%;
-    height: 20%;
+.footer__intro{
+    height: 15rem;
+    
 }
 
-.shop{
-    width: 30vw;
+.footer__logo img{
+    width: 25rem;
+    height: 10rem;
+}
+
+.footer__logo h1{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer__shopSocials{
+    height: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.fa-instagram{
+    color: #E1306C;
+}
+
+.fa-instagram a{
+    width: 100%;
+    height: 100%;
+}   
+
+.fa-youtube{
+    color: #c4302b;
+}
+
+.fa-facebook{
+    color: #3b5998;
+}
+
+.footer__email > p >a{
+    color: black;
+}
+
+.footer__shop{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -612,9 +810,9 @@ footer{
     
 }
 
-.shop a{
+.footer__shop a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     
@@ -645,12 +843,25 @@ footer{
     color: white;
 }
 
-.shop ul{
-    list-style: none;
+.footer__info li{
+    list-style:none;
+    margin-bottom: 0.5rem;
+}
+
+.footer__service li{
+    list-style:none;
+    margin-bottom: 0.5rem;
+}
+
+.footer__info a{
+    color: black;
+}
+
+.footer__service a{
+    color:black;
 }
 
 .developer{
-    width: 40vw;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -662,6 +873,130 @@ footer{
     list-style: none;
 }
 
-.developer > ul > li > a{
-    
+.footer__copyright{
+    display: flex;
+    justify-content: center;
+}
+
+.dev__socials a{
+    text-decoration: none;
+    color:black;
+}
+
+.dev__socials a:visited{
+    color: black;
+}
+
+@media screen and (max-width: 59.375rem){ /* 950px*/
+    .logoImg{
+        transform: scale(0.8);
+    }
+    .logo h1{
+        font-size: 1.2rem;
+    }
+    header > nav > ul > li{
+        font-size: 1.2rem;
+    }
+    .webshopSlogan{
+        height: 20rem;
+    }
+    .heroSection{
+        flex-wrap: wrap;
+    }
+    .heroSection img{
+        height: 25rem;
+        gap: 1rem;
+    }
+    .heroSection__text{
+        height: 25rem;
+        font-size: 1.5rem;
+        gap:1.5rem;
+    }
+    .button__herosection{
+        width: 10rem;
+        font-size: 50%;
+    }
+    .categories div{
+        height: 20rem;
+    }
+    .points_card{
+        width: 25rem;
+        height: 15rem;
+        font-size: 80%;
+    }
+    .featureItem{
+        gap: 2rem;
+    }
+    .featureItem article{
+        height: 30rem;
+        font-size: 70%;
+    }
+    .featureItem img{
+        height: 30rem;
+    }
+    .featureItem__button:hover{
+        border: none;
+    }
+    .review{
+        height: 30rem;
+    }
+    .quote{
+        display: none;
+    }
+    .productOverview{
+        display:block;
+    }
+    .filter--inputs{
+        width: auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        font-size: 80%;
+    }
+    .products{
+        width: auto;
+        padding: 4rem;
+    }
+    .shoppingCart{
+        top: 23rem;
+    }
+    footer{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 37.5rem){ /* 600px*/
+    header > nav > ul > li{
+        font-size: 1rem;
+    }
+    .button__herosection{
+        width: 10rem;
+        font-size: 50%;
+    }
+    .categories div{
+        height: 15rem;
+    }
+    .points_card{
+        width: 22rem;
+        height: 12rem;
+        font-size: 60%;
+        gap: 0;
+    }
+    .points_card i {
+        visibility: hidden;
+    }
+    .featureItem article{
+        height: 20rem;
+        font-size: 70%;
+    }
+    .featureItem img{
+        height: 20rem;
+    }
+    .products{
+        font-size: 80%;
+    }
+    .product__addCart{
+        font-size: 80%;
+    }
 }

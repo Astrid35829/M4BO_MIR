@@ -11,7 +11,8 @@
     <script src="https://kit.fontawesome.com/df78193d73.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>>
+    
+    <script src="js/productpagina.js" defer></script>
     
     <title>Stitches and Loops: Mushroom</title>
 </head>
@@ -31,61 +32,99 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="productPagina__mushroom">
         <button id="js--checkoutButton" class="shoppingCart">
             <i class="fa-solid fa-bag-shopping"></i>
             <p class="shoppingCart__message">0</p>
         </button>
-        <section>
-            <h2>Mushroom</h2>
+        <section class="mushroom__heading">
+            <img id="js--mushroomImg" src="img/mushroom.webp" alt="" class="mushroom__image">
+            <article class="mushroom__info">
+                <h2>Mushroom</h2>
+                <ul class="mushroom__variants">
+                    <li id="js--mushroomBlue" class="mushroom__variant mushroom__color1"></li>
+                    <li id="js--mushroomGreen" class="mushroom__variant mushroom__color2"></li>
+                    <li id="js--mushroomPink" class="mushroom__variant mushroom__color3"></li>
+                </ul>
+                <h3 class="mushroom__price">€ 6,-</h3>
+            </article>
+            
         </section>
     </main>
     <footer>
         <!-- DEVELOPER-->
-        <section class="footer-logo">
-            <img src="img/BoLogo.webp" alt="Stitch and Loop initials logo" class="logoImg">
-            <h1>Stitches and Loops</h1>
-            <i class="fa-brands fa-instagram fa-2xl" ></i>
-            <i class="fa-brands fa-youtube fa-2xl"></i>
-            <i class="fa-brands fa-facebook fa-2xl"></i>
+        <section class="footer__logo">
+            <article class="footer__intro">
+                <img src="img/BoLogo.webp" alt="Stitch and Loop initials logo" class="logoImg">
+                <h1>Stitches and Loops</h1>
+            </article>
+            <article class="footer__shopSocials">
+                <i class="fa-brands fa-instagram fa-2xl">
+                    <a href="https://www.instagram.com/stitches.and_loops/" target="_blank"></a>
+                </i>
+                <i class="fa-brands fa-youtube fa-2xl"></i>
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+            </article>
+            
         </section>
-        <section class="shop">
-            <article>
+        <section class="footer__shop">
+            <article class="footer__email">
                 <h3>Contact</h3>
                 <p>Email: <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a></p>
             </article>
             <article class="shop__products">
                 <a href="productOverview1.html">Shop</a>
             </article>
-            <article>
+            <article class="footer__info">
                 <h3>Over Stitches and Loops</h3>
                 <ul>
-                    <li>Stitches and Loops</li>
-                    <li>Over de producten</li>
+                    <li>
+                        <a href="">Stitches and Loops</a>
+                    </li>
+                    <li>
+                        <a href="">Over de producten</a>
+                    </li>
                 </ul>
             </article>
-            <article>
+            <article class="footer__service">
                 <h3>Klantenservice</h3>
                 <ul>
-                    <li>Veelgestelde vragen</li>
-                    <li>betaalmethoden</li>
-                    <li>Algemen voorwaarden</li>
-                    <li>Privacy Policy</li>
+                    <li>
+                        <a href="">Veelgestelde vragen</a>
+                    </li>
+                    <li>
+                        <a href="">betaalmethoden</a>
+                    </li>
+                    <li>
+                        <a href="">Algemen voorwaarden</a>
+                    </li>
+                    <li>
+                        <a href="">Privacy Policy</a>
+                    </li>
                 </ul>
             </article>
         </section>
         <section class="developer">
-            <article><h2>Web Developer</h2>
-                <h3>Astrid Prins</h3></article>
-            <article><h4>Socials</h3>
+            <article>
+                <h2>Web Developer</h2>
+                <h3>Astrid Prins</h3>
+            </article>
+            <article class="dev__socials">
+                <h4>Socials</h3>
                 <ul>
-                    <li>Github</li>
-                    <li>Linkedin</li>
-                    <li>Email</li>
+                    <li>
+                        <a href="https://github.com/Astrid35829" target="_blank">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/astrid-prins/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="mailto:35829@ma-web.nl" target="_blank">35829@ma-web.nl</a>
+                    </li>
                 </ul>
             </article>
         </section>
     </footer>
-    <footer>©Copyright 2023</footer>
+    <footer class="footer__copyright">©Copyright 2023</footer>
 </body>
 </html>

@@ -79,7 +79,6 @@
         </button>
         <div id="js--productoverview" class="productOverview">
             <section class="filter--inputs">
-                <h3>Categories</h3>
                 <!--<div>
                     <input id="checkbox-interactive" type="checkbox" class="filter">
                     <label for="checkbox-interactive" class="label">Interactive Items</label>
@@ -104,174 +103,252 @@
 
                 <ul class="products">
                     <li class="product" data-category="keychain">
-                        <figure>
-                            <img class="product__image" src="img/bulbasaur.webp" alt="Keychain sized crocheted Bulbasaur">
-                        </figure>
                         <h4>Bulbasaur</h4>
+                        <img class="product__image" src="img/bulbasaur.webp" alt="Keychain sized crocheted Bulbasaur">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>10</p>
+                            <p>6</p>
                         </div>
-                        <button class="product__addCart">Add to cart</button>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__bulb"></li>
+                        </ul>
+                        <button class="product__addCart">Returning Soon</button>
+                        <p class="product__amount">0 in storage</p>
                     </li>
                     <li class="product" data-category="mediumPlush">
-                        <img class="product__image" src="img/catctus.webp" alt="Medium sized crocheted cactus with cat ears">
                         <h4>Cat-ctus</h4>
+                        <img class="product__image" src="img/catctus.webp" alt="Medium sized crocheted cactus with cat ears">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p>15</p>
                         </div>
-                        <button class="product__addCart">Add to cart</button>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__catctus"></li>
+                        </ul>
+                        <button class="product__addCart">Returning Soon</button>
+                        <p class="product__amount">0 in storage</p>
                     </li>
                     <li class="product" data-category="smallPlush">
-                        <img id="js--img" class="product__image" src="img/charmander.webp" alt="Small sized crocheted Charmander">
                         <h4>Charmander</h4>
+                        <img id="js--img" class="product__image" src="img/charmander.webp" alt="Small sized crocheted Charmander">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p id="js--text">10</p>
                         </div>
-                        <button class="product__addCart">Add to cart</button>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__char"></li>
+                        </ul>
+                        <button class="product__addCart">Returning Soon</button>
+                        <p class="product__amount">0 in storage</p>
                     </li>
                     <li class="product" data-category="keychain">
-                        <img class="product__image" src="img/chicken.webp" alt="Keychain sized crocheted redbrown chicken">
                         <h4>Chicken</h4>
-                        <div>
+                        <img class="product__image" src="img/chicken.webp" alt="Keychain sized crocheted redbrown chicken">
+                        <div class="price">
                             <p>	&#x20AC;</p>
                             <p>6</p>
-                        </div class="price">
-                        <button class="product__addCart">Add to cart</button>
+                        </div>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__chick"></li>
+                        </ul>
+                        <button class="product__addCart">Returning Soon</button>
+                        <p class="product__amount">0 in storage</p>
                     </li>
                     <li class="product" data-category="smallPlush">
-                        <img class="product__image" src="img/giraffe.webp" alt="Small sized crocheted giraffe">
                         <h4>Giraffe</h4>
+                        <img class="product__image" src="img/giraffe.webp" alt="Small sized crocheted giraffe">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p>10</p>
                         </div>
-                        <button class="product__addCart">Add to cart</button>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__gir"></li>
+                        </ul>
+                        <button class="product__addCart">Returning Soon</button>
+                        <p class="product__amount">0 in storage</p>
                     </li>
                     <li class="product" data-category="largePlush">
-                        <img class="product__image" src="img/lamb.webp" alt="Large sized crocheted lamb">
                         <h4>Lamb</h4>
+                        <img class="product__image" src="img/lamb.webp" alt="Large sized crocheted lamb">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p>20</p>
                         </div>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__lamb"></li>
+                        </ul>
                         <button data-product="lamb" class="product__addCart">Add to cart</button>
+                        <p class="product__amount">0 in storage</p>
                     </li>
 
                     <li class="product" data-category="smallPlush">
-                        <img class="product__image" src="img/mushroom.webp" alt="Small sized crocheted blue mushroom">
-                        <h4>Blue Mushroom</h4>
+                        <h4>Mushroom</h4>
+                        <img class="product__image" src="img/mushroomPink.webp" alt="Small sized crocheted blue mushroom">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p>10</p>
                         </div>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__mush1"></li>
+                            <li class="product__variant variant__mush2"></li>
+                            <li class="product__variant variant__mush3"></li>
+                        </ul>
                         <div class="buttons">
                             <a class="moreMushroom" href="productPagina1.html">Learn More</a>
                             <button data-product="mushroom"class="product__addCart product__more">Add to cart</button>
                         </div>
+                        <p class="product__amount">3 in storage</p>
                     </li>
                     
                     <li class="product" data-category="mediumPlush">
-                        <img class="product__image" src="img/roseTurtle.webp" alt="Medium sized crocheted purple rose turtle">
                         <h4>Rose Turtle</h4>
+                        <img class="product__image" src="img/roseTurtle.webp" alt="Medium sized crocheted purple rose turtle">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p>15</p>
                         </div>
-                        <button class="product__addCart">Add to cart</button>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__turtle"></li>
+                        </ul>
+                        <button class="product__addCart">Returning Soon</button>
+                        <p class="product__amount">0 in storage</p>
                     </li>
                     <li class="product" data-category="smallPlush">
-                        <img class="product__image" src="img/sailboat.webp" alt="Small sized crocheted blue sailboat">
                         <h4>Sailboat</h4>
+                        <img class="product__image" src="img/sailboat.webp" alt="Small sized crocheted blue sailboat">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p>10</p>
                         </div>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__sail"></li>
+                        </ul>
                         <button data-product="sailboat" class="product__addCart">Add to cart</button>
+                        <p class="product__amount">3 in storage</p>
                     </li>
 
                     <li class="product" data-category="keychain">
-                        <img class="product__image" src="img/squidGreen.jpg" alt="Keychain sized crocheted green squid">
                         <h4>Squid</h4>
+                        <img class="product__image" src="img/squidHat.webp" alt="Keychain sized crocheted green squid">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p>6</p>
                         </div>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__squid1"></li>
+                            <li class="product__variant variant__squid2"></li>
+                            <li class="product__variant variant__squid3"></li>
+                        </ul>
                         <div class="buttons">
                             <a class="'moreSquid" href="productPagina2.html">Learn More</a>
                             <button data-product="squid" class="product__addCart product__more">Add to cart</button>
                         </div>
+                        <p class="product__amount">5 in storage</p>
                     </li>
 
                     <li class="product" data-category="smallPlush">
-                        <img class="product__image" src="img/squirtle.webp" alt="Small sized crocheted Squirtle">
                         <h4>Squirtle</h4>
+                        <img class="product__image" src="img/squirtle.webp" alt="Small sized crocheted Squirtle">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p>10</p>
                         </div>
-                        <button class="product__addCart">Add to cart</button>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__squirtle"></li>
+                        </ul>
+                        <button class="product__addCart">Returning Soon</button>
+                        <p class="product__amount">0 in storage</p>
                     </li>
                     <li class="product" data-category="keychain">
-                        <img class="product__image" src="img/koala.webp" alt="Keychain sized crocheted koala">
                         <h4>Koala</h4>
+                        <img class="product__image" src="img/koala.webp" alt="Keychain sized crocheted koala">
                         <div class="price">
                             <p>	&#x20AC;</p>
                             <p>6</p>
                         </div>
-                        <button class="product__addCart">Add to cart</button>
+                        <ul class="product__variants">
+                            <li class="product__variant variant__koala"></li>
+                        </ul>
+                        <button class="product__addCart">Returning Soon</button>
+                        <p class="product__amount">0 in storage</p>
                     </li>
                 </ul>
         </div>
     </main>
     <footer>
         <!-- DEVELOPER-->
-        <section class="footer-logo">
-            <img src="img/BoLogo.webp" alt="Stitch and Loop initials logo" class="logoImg">
-            <h1>Stitches and Loops</h1>
-            <i class="fa-brands fa-instagram fa-2xl" ></i>
-            <i class="fa-brands fa-youtube fa-2xl"></i>
-            <i class="fa-brands fa-facebook fa-2xl"></i>
+        <section class="footer__logo">
+            <article class="footer__intro">
+                <img src="img/BoLogo.webp" alt="Stitch and Loop initials logo" class="logoImg">
+                <h1>Stitches and Loops</h1>
+            </article>
+            <article class="footer__shopSocials">
+                <i class="fa-brands fa-instagram fa-2xl">
+                    <a href="https://www.instagram.com/stitches.and_loops/" target="_blank"></a>
+                </i>
+                <i class="fa-brands fa-youtube fa-2xl"></i>
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+            </article>
+            
         </section>
-        <section class="shop">
-            <article>
+        <section class="footer__shop">
+            <article class="footer__email">
                 <h3>Contact</h3>
                 <p>Email: <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a></p>
             </article>
             <article class="shop__products">
                 <a href="productOverview1.html">Shop</a>
             </article>
-            <article>
+            <article class="footer__info">
                 <h3>Over Stitches and Loops</h3>
                 <ul>
-                    <li>Stitches and Loops</li>
-                    <li>Over de producten</li>
+                    <li>
+                        <a href="">Stitches and Loops</a>
+                    </li>
+                    <li>
+                        <a href="">Over de producten</a>
+                    </li>
                 </ul>
             </article>
-            <article>
+            <article class="footer__service">
                 <h3>Klantenservice</h3>
                 <ul>
-                    <li>Veelgestelde vragen</li>
-                    <li>betaalmethoden</li>
-                    <li>Algemen voorwaarden</li>
-                    <li>Privacy Policy</li>
+                    <li>
+                        <a href="">Veelgestelde vragen</a>
+                    </li>
+                    <li>
+                        <a href="">betaalmethoden</a>
+                    </li>
+                    <li>
+                        <a href="">Algemen voorwaarden</a>
+                    </li>
+                    <li>
+                        <a href="">Privacy Policy</a>
+                    </li>
                 </ul>
             </article>
         </section>
         <section class="developer">
-            <article><h2>Web Developer</h2>
-                <h3>Astrid Prins</h3></article>
-            <article><h4>Socials</h3>
+            <article>
+                <h2>Web Developer</h2>
+                <h3>Astrid Prins</h3>
+            </article>
+            <article class="dev__socials">
+                <h4>Socials</h3>
                 <ul>
-                    <li>Github</li>
-                    <li>Linkedin</li>
-                    <li>Email</li>
+                    <li>
+                        <a href="https://github.com/Astrid35829" target="_blank">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/astrid-prins/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="mailto:35829@ma-web.nl" target="_blank">35829@ma-web.nl</a>
+                    </li>
                 </ul>
             </article>
         </section>
     </footer>
-    <footer>©Copyright 2023</footer>
+    <footer class="footer__copyright">©Copyright 2023</footer>
 </body>
 </html>

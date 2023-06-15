@@ -6,26 +6,6 @@ for(let i = 0; i < filters.length; i++){
     filters[i].checked = true;
 }
 
-/*
-let interactive = document.getElementById("checkbox-interactive");
-interactive.onchange = function(){
-    if(interactive.checked === true){
-        for(let i = 0; i < allProduct.length; i++){
-            if(allProduct[i].dataset.category === "interactive"){
-                allProduct[i].style.display = "block";
-            }
-        }
-    }
-    else{
-        for(let i = 0; i < allProduct.length; i++){
-            if(allProduct[i].dataset.category === "interactive"){
-                allProduct[i].style.display = "none";
-            }
-        }
-    }
-}
-*/
-
 let keychain = document.getElementById("checkbox-keychain");
 keychain.onchange = function(){
     if(keychain.checked === true){
@@ -188,3 +168,4 @@ let data = fetch("js/producten.js").then(
             price.innerHTML = echteData.text;
         }
 );
+
