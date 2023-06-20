@@ -147,14 +147,14 @@ main{
 
 .btn:hover{
     cursor: pointer;
-    border: 0.3rem solid white;
+    border: 0.5rem solid white;
 }
 
 .heroSection{
     width: 100vw;
     height: auto;
     padding: 4rem;
-    background: var(--background-theme);
+    
     display: flex;
     justify-content: center; 
     gap: 5rem;
@@ -196,7 +196,7 @@ main{
 
 .heroSection__text button:hover{
     cursor: pointer;
-    border: 0.3rem solid white;
+    border: 0.5rem solid var(--background-hover);
 }
 
 .categories{
@@ -234,6 +234,7 @@ main{
 
 .categories  img:hover{
     cursor: pointer;
+    border: 0.5rem solid var(--background-hover);
 }
 
 .categories a:visited{
@@ -243,7 +244,7 @@ main{
 .importantPoints{
     width: 100vw;
     padding: 4rem;
-    background: var(--background-theme);
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,6 +265,7 @@ main{
     gap: 0.5rem;
 }
 
+
 .featureItem{
     width: 100vw;
     padding: 4rem;
@@ -281,7 +283,7 @@ main{
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    background: var(--background-theme);
+    background: var(--background-body);
     border-radius: 0.5rem;
 }
 
@@ -299,7 +301,7 @@ main{
 }
 
 .featureItem__button:hover{
-    border: 1rem solid white;
+    border: 0.5rem solid var(--background-hover);
 }
 
 .featureItem h2{
@@ -313,7 +315,6 @@ main{
 }
 
 .reviews{
-    background: var(--background-theme);
     width: 100vw;
     padding: 4rem;
     display: flex;
@@ -339,7 +340,7 @@ main{
 }
 
 .review p {
-    font-size: 150%;
+    font-size: 90%;
     font-weight: 400;
     padding-bottom: 1rem;
 }
@@ -353,7 +354,7 @@ main{
 
 .review__text{
     padding-top: 2rem;
-    font-size: 90%;
+    
 }
 
 .stars{
@@ -420,6 +421,14 @@ main{
     padding: 2rem;
     display: flex;
     justify-content: flex-end;
+}
+
+.checkout__buttons{
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
 }
 
 .modal{
@@ -600,6 +609,7 @@ main{
 
 .variant__mush3{
     background: rgb(255, 145, 202);
+    border: 0.2rem solid black;
 }
 
 .variant__turtle{
@@ -682,7 +692,7 @@ main{
 }
 
 /* Productpagina*/
-.productPagina__mushroom{
+.productPagina__mushroom, .productPagina__squid{
     width: 100vw;
     height: auto;
     padding: 4rem;
@@ -691,38 +701,38 @@ main{
     flex-wrap: wrap;
 }
 
-.mushroom__image{
+.mushroom__image, .squid__image{
     width: 40rem;
     height: 40rem;
     object-fit: cover;
 }
 
-.mushroom__heading{
+.mushroom__heading, .squid__heading{
     display: flex;
     gap: 4rem;
     padding: 4rem;
     box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
 }
 
-.mushroom__info{
+.mushroom__info, .squid__info{
     display: flex;
     flex-direction: column;
     gap: 4rem;
 }
 
-.mushroom__variants{
+.mushroom__variants, .squid__variants{
     display: flex;
     gap: 4rem;
 }
 
-.mushroom__variant{
+.mushroom__variant, .squid__variant{
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
     list-style: none;
 }
 
-.mushroom__variant:hover{
+.mushroom__variant, .squid__variant:hover{
     cursor: pointer;
 }
 
@@ -741,8 +751,27 @@ main{
     border: none;
 }
 
-.mushroom__price{
+.squid__color1{
+    background: rgb(138, 203, 40);
+    border: none;
+}
+
+.squid__color2{
+    background: purple;
+    border: none;
+}
+
+.squid__color3{
+    background: linear-gradient(lightgreen, 30%, green, 40%,  pink);
+    border: none;
+}
+
+.mushroom__price, .squid__price{
     font-size: 200%;
+}
+
+.productPagina__addCart{
+    width: 20rem;
 }
 
 footer{

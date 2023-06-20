@@ -11,9 +11,10 @@
     <script src="https://kit.fontawesome.com/df78193d73.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
     
-    <title>Stitches and Loops: Mushroom</title>
+    <script src="js/productpagina2.js" defer></script>
+    
+    <title>Stitches and Loops: Squid</title>
 </head>
 <body>
     <header>
@@ -31,13 +32,67 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="productPagina__squid">
+        <section id="js--checkoutWindow" class="checkout">
+            <div class="checkout__item">
+                <img src="img/mushroomPink.webp" alt="Small sized crocheted pink mushroom" class="checktout__img">
+                <p class="checkout__title">Small Pink Mushroom</p>
+                <p id="js--amount-mushroom">0</p>
+                <p>€</p>
+                <p id="js--price1">0</p>
+            </div>
+            <div class="checkout__item">
+                <img src="img/sailboat.webp" alt="Small sized crocheted sailboat" class="checktout__img">
+                <p class="checkout__title">Small Blue Sailboat</p>
+                <p id="js--amount-sailboat">0</p>
+                <p>€</p>
+                <p id="js--price2">0</p>
+            </div>
+            <div class="checkout__item">
+                <img src="img/squidHat.webp" alt="Keychain sized crocheted squid with hat" class="checktout__img">
+                <p class="checkout__title">Keychain Squid With Hat</p>
+                <p id="js--amount-squid">0</p>
+                <p>€</p>
+                <p id="js--price3">0</p>
+            </div>
+            <div class="checkout__item">
+                <img src="img/lamb.webp" alt="Large sized crocheted lamb" class="checktout__img">
+                <p class="checkout__title">Large Lamb</p>
+                <p id="js--amount-lamb">0</p>
+                <p>€</p>
+                <p id="js--price4">0</p>
+            </div>
+            <div class="checkout__total">
+                <p>Total:</p>
+                <p>€</p>
+                <p id="js--checkout-total">0</p>
+            </div>
+            <button id="js--checkout__close" class="checkout__close">Close</button>
+        </section>
+        
+        <article class="modal" id="js--shoppingModal">
+            Added to cart
+        </article>
         <button id="js--checkoutButton" class="shoppingCart">
             <i class="fa-solid fa-bag-shopping"></i>
             <p class="shoppingCart__message">0</p>
         </button>
-        <section>
-            <h2>Squid</h2>
+        <section id="js--productoverview" >
+            <div class="squid__heading">
+                <img id="js--squidImg" src="img/squid.webp" alt="" class="squid__image">
+            <article class="squid__info">
+                <h2 id="js--squidName">Squid</h2>
+                <ul class="squid__variants">
+                    <li id="js--squidGreen" class="squid__variant squid__color1"></li>
+                    <li id="js--squidPurple" class="squid__variant squid__color2"></li>
+                    <li id="js--squidHat" class="squid__variant squid__color3"></li>
+                </ul>
+                <h3 class="squid__price">€ 6,-</h3>
+                <button data-product="squid" class="product__addCart product__more productPagina__addCart">Add to cart</button>
+            </article>
+            </div>
+            
+            
         </section>
     </main>
     <footer>
@@ -82,10 +137,10 @@
                         <a href="">Veelgestelde vragen</a>
                     </li>
                     <li>
-                        <a href="">betaalmethoden</a>
+                        <a href="">Betaalmethoden</a>
                     </li>
                     <li>
-                        <a href="">Algemen voorwaarden</a>
+                        <a href="">Algemene voorwaarden</a>
                     </li>
                     <li>
                         <a href="">Privacy Policy</a>
@@ -99,7 +154,7 @@
                 <h3>Astrid Prins</h3>
             </article>
             <article class="dev__socials">
-                <h4>Socials</h3>
+                <h4>Socials</h4>
                 <ul>
                     <li>
                         <a href="https://github.com/Astrid35829" target="_blank">Github</a>
