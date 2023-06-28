@@ -11,85 +11,93 @@ giveawayExit.onclick = function(){
     giveaway.style.display = "none";
 }
 
-//filter
-let allProduct = document.getElementsByClassName("product");
-let filters = document.getElementsByClassName("filter");
-
-for(let i = 0; i < filters.length; i++){
-    filters[i].checked = true;
+const dropdown = document.getElementById("js-dropdown");
+const dropdownButton = document.getElementById("js--dropdownButton");
+const dropdownOptions = document.getElementById("js--dropdownOptions");
+const dropdownClose = document.getElementById("js--dropdown-close");
+dropdownButton.onclick = function(){
+    console.log("click");
+    dropdownOptions.style.display = "block";
+    
 }
 
-let keychain = document.getElementById("checkbox-keychain");
-keychain.onchange = function(){
-    if(keychain.checked === true){
-        for(let i = 0; i < allProduct.length; i++){
-            if(allProduct[i].dataset.category === "keychain"){
-                allProduct[i].style.display = "flex";
-            }
-        }
-    }
-    else{
-        for(let i = 0; i < allProduct.length; i++){
-            if(allProduct[i].dataset.category === "keychain"){
-                allProduct[i].style.display = "none";
-            }
-        }
-    }
+dropdownClose.onclick = function(){
+    dropdownOptions.style.display = "none";
 }
 
-let mediumPlush = document.getElementById("checkbox-mediumPlush");
-mediumPlush.onchange = function(){
-    if(mediumPlush.checked === true){
-        for(let i = 0; i < allProduct.length; i++){
-            if(allProduct[i].dataset.category === "mediumPlush"){
-                allProduct[i].style.display = "flex";
-            }
-        }
-    }
-    else{
-        for(let i = 0; i < allProduct.length; i++){
-            if(allProduct[i].dataset.category === "mediumPlush"){
-                allProduct[i].style.display = "none";
-            }
-        }
-    }
-}
+const allProduct = document.getElementsByClassName("product");
+const dropdownPrice1 = document.getElementById("js--dropdown-price1");
+const dropdownPrice2 = document.getElementById("js--dropdown-price2");
+const dropdownPrice3 = document.getElementById("js--dropdown-price3");
+const dropdownAll = document.getElementById("js--dropdown-all");
 
-let smallPlush = document.getElementById("checkbox-smallPlush");
-smallPlush.onchange = function(){
-    if(smallPlush.checked === true){
-        for(let i = 0; i < allProduct.length; i++){
-            if(allProduct[i].dataset.category === "smallPlush"){
-                allProduct[i].style.display = "flex";
-            }
+dropdownPrice1.onclick = function(){
+    for(let i = 0; i < allProduct.length; i++){
+        if(allProduct[i].dataset.category === "keychain"){
+            allProduct[i].style.display = "flex";
         }
-    }
-    else{
-        for(let i = 0; i < allProduct.length; i++){
+        else{
             if(allProduct[i].dataset.category === "smallPlush"){
                 allProduct[i].style.display = "none";
             }
-        }
-    }
-}
-
-let largePlush = document.getElementById("checkbox-largePlush");
-largePlush.onchange = function(){
-    if(largePlush.checked === true){
-        for(let i = 0; i < allProduct.length; i++){
-            if(allProduct[i].dataset.category === "largePlush"){
-                allProduct[i].style.display = "flex";
+            if(allProduct[i].dataset.category === "mediumPlush"){
+                allProduct[i].style.display = "none";
             }
-        }
-    }
-    else{
-        for(let i = 0; i < allProduct.length; i++){
             if(allProduct[i].dataset.category === "largePlush"){
                 allProduct[i].style.display = "none";
             }
         }
     }
 }
+
+dropdownPrice2.onclick = function(){
+    for(let i = 0; i < allProduct.length; i++){
+        if(allProduct[i].dataset.category === "smallPlush"){
+            allProduct[i].style.display = "flex";
+        }
+        else{
+            if(allProduct[i].dataset.category === "keychain"){
+                allProduct[i].style.display = "none";
+            }
+            if(allProduct[i].dataset.category === "mediumPlush"){
+                allProduct[i].style.display = "none";
+            }
+            if(allProduct[i].dataset.category === "largePlush"){
+                allProduct[i].style.display = "none";
+            }
+        }
+    }
+}
+
+dropdownAll.onclick = function(){
+    for(let i = 0; i < allProduct.length; i++){
+        allProduct[i].style.display = "flex";
+    }
+}
+
+dropdownPrice3.onclick = function(){
+    for(let i = 0; i < allProduct.length; i++){
+        if(allProduct[i].dataset.category === "mediumPlush"){
+            allProduct[i].style.display = "flex";
+        }
+        else if(allProduct[i].dataset.category === "largePlush"){
+            allProduct[i].style.display = "flex";
+        }
+        else{
+            if(allProduct[i].dataset.category === "keychain"){
+                allProduct[i].style.display = "none";
+            }
+            if(allProduct[i].dataset.category === "smallPlush"){
+                allProduct[i].style.display = "none";
+            }
+        }
+    }
+}
+
+
+
+
+
 
 // Shoppingcart button
 const addToCartButton = document.getElementsByClassName("product__addCart");
@@ -152,11 +160,11 @@ checkoutButton.onclick = function(){
         let sailboatTotal = sailboat *10;
         let squidTotal = squid * 6;
         let lambTotal = lamb * 20;  
-        document.getElementById("js--priceMushroom").innerHTML = mushroomTotal;
-        document.getElementById("js--priceSailboat").innerHTML = sailboatTotal;
-        document.getElementById("js--priceSquid").innerHTML = squidTotal;
-        document.getElementById("js--priceLamb").innerHTML = lambTotal;
-        document.getElementById("js--checkout-total").innerHTML = mushroomTotal + sailboatTotal + squidTotal + lambTotal + 4.99;
+        document.getElementById("js--price1").innerHTML = mushroomTotal;
+        document.getElementById("js--price2").innerHTML = sailboatTotal;
+        document.getElementById("js--price3").innerHTML = squidTotal;
+        document.getElementById("js--price4").innerHTML = lambTotal;
+        document.getElementById("js--checkout-total").innerHTML = mushroomTotal + sailboatTotal + squidTotal + lambTotal;
         return;
     }
 }
@@ -285,4 +293,3 @@ let data = fetch("../producten.json").then(
             name12.innerHTML = echteData.name12;
         }
 );
-

@@ -15,6 +15,28 @@
     <title>Stitches and Loops</title>
 </head>
 <body>
+    <section id="js--giveaway" class="giveaway">
+        <form class="giveaway__form" action="">
+            <img class="giveaway__image" src="img/squirrel.webp" alt="Small crocheted squirrel">
+            <article class="giveaway__info">
+                <h2> Enter giveaway</h2>
+                <div>
+                    <label for="name">Full name:</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                </div>
+                <div class="giveaway__buttons">
+                    <button class="giveaway__button giveaway__button--submit">Submit</button>
+                    <button id="js--giveawayExit" class="giveaway__button giveaway__button--exit">Exit</button>
+                </div>
+                
+            </article>
+            
+        </form>
+    </section>
     <header>
         <section class="logo">
             <a href="index.html">
@@ -51,7 +73,7 @@
                     <p>
                         Made 100% from cotton and wool, our small items are perfect to display in your house or as a gift for that special someone.
                     </p>
-                    <button class="button__herosection">Enter Giveaway</button>
+                    <button id="js--giveawayButton" class="button__herosection">Enter Giveaway</button>
                 </article>
         </section>
         <!-- CATEGORIES-->
@@ -85,23 +107,27 @@
         <!--Add custom background-->
         <section class="importantPoints">
             <div class="points_card">
-                <h3>Sustainability</h3>
                 <i class="fa-solid fa-leaf"></i>
+                <h3>Sustainability</h3>
+                
                 <p>Most of our products use 100% cotton and wool</p>
             </div>
             <div class="points_card">
-                <h3>Handcrafted</h3>
                 <i class="fa-solid fa-hand-holding-heart"></i>
+                <h3>Handcrafted</h3>
+                
                 <p>Everything offered is handcrafted</p>
             </div>
             <div class="points_card">
-                <h3>Small Business</h3>
                 <i class="fa-solid fa-person-dress"></i>
-                <p>One man Small Business</p>
+                <h3>Small Business</h3>
+                
+                <p>Personal Contact</p>
             </div>
             <div class="points_card">
-                <h3>In the Netherlands</h3>
                 <i class="fa-solid fa-location-dot"></i>
+                <h3>In the Netherlands</h3>
+                
                 <p>Dutch and English spoken while based in the Netherlands</p>
             </div>
         </section>
@@ -118,7 +144,6 @@
         <section>
             <ul class="reviews">
                 <li class="review">
-                    <figure class="quote">&#10077;</figure>
                     <p>Mila Krijter</p>
                     <img class="review__pfp" src="img/Bopfpreview1.webp" alt="">
                     <p class="review__text">"Totally love this product"</p>
@@ -131,7 +156,6 @@
                     <img class="review__product" src="img/bulbasaur.webp" alt="Keychain crocheted Bulbasaur">
                 </li>
                 <li class="review">
-                    <figure class="quote">&#10077;</figure>
                     <p>Ella Saunders</p>
                     <img class="review__pfp" src="img/Bopfpreview2.webp" alt="">
                     <p class="review__text">"So cute and soft!!"</p>
@@ -144,7 +168,6 @@
                     <img class="review__product" src="img/charmander.webp" alt="Small crocheted Charmander">
                 </li>
                 <li class="review">
-                    <figure class="quote">&#10077;</figure>
                     <p>Peyton Boyle</p>
                     <img class="review__pfp" src="img/Bopfpreview3.webp" alt="">
                     <p class="review__text">"Good quality, love them!"</p>
@@ -167,19 +190,20 @@
                 <h1>Stitches and Loops</h1>
             </article>
             <article class="footer__shopSocials">
-                <i class="fa-brands fa-instagram fa-2xl">
-                    <a href="https://www.instagram.com/stitches.and_loops/" target="_blank"></a>
-                </i>
+                <a href="https://www.instagram.com/stitches.and_loops/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                </a>
                 <i class="fa-brands fa-youtube fa-2xl"></i>
                 <i class="fa-brands fa-facebook fa-2xl"></i>
             </article>
-            
-        </section>
-        <section class="footer__shop">
             <article class="footer__email">
                 <h3>Contact</h3>
-                <p>Email: <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a></p>
+                <p>Email:</p>
+                <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a>
             </article>
+        </section>
+        <section class="footer__shop">
+            
             <article class="shop__products">
                 <a href="productOverview1.html">Shop</a>
             </article>
@@ -213,6 +237,7 @@
             </article>
         </section>
         <section class="developer">
+            <img class="developer__img" src="img/DeveloperLogo.webp" alt="Web developer logo A and P forming a dog">
             <article>
                 <h2>Web Developer</h2>
                 <h3>Astrid Prins</h3>

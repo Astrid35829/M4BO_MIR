@@ -11,11 +11,34 @@
     <script src="https://kit.fontawesome.com/df78193d73.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/productoverview2.js" defer></script>
+    <script src="producten.json" defer></script>
 
     <title>Stitches and Loops: Product Overview 2</title>
 </head>
 <body>
+    <section id="js--giveaway" class="giveaway">
+        <form class="giveaway__form" action="">
+            <img class="giveaway__image" src="img/squirrel.webp" alt="Small crocheted squirrel">
+            <article class="giveaway__info">
+                <h2> Enter giveaway</h2>
+                <div>
+                    <label for="name">Full name:</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                </div>
+                <div class="giveaway__buttons">
+                    <button class="giveaway__button giveaway__button--submit">Submit</button>
+                    <button id="js--giveawayExit" class="giveaway__button giveaway__button--exit">Exit</button>
+                </div>
+                
+            </article>
+            
+        </form>
+    </section>
     <header>
         <section class="logo">
             <a href="index.html">
@@ -36,6 +59,7 @@
             <div class="checkout__item">
                 <img src="img/mushroomPink.webp" alt="Small sized crocheted pink mushroom" class="checktout__img">
                 <p class="checkout__title">Small Pink Mushroom</p>
+                <figure class="shoppingCart__variatie variant__mush3"></figure>
                 <p id="js--amount-mushroom">0</p>
                 <p>€</p>
                 <p id="js--price1">0</p>
@@ -43,6 +67,7 @@
             <div class="checkout__item">
                 <img src="img/sailboat.webp" alt="Small sized crocheted sailboat" class="checktout__img">
                 <p class="checkout__title">Small Blue Sailboat</p>
+                <figure class="shoppingCart__variatie variant__sail"></figure>
                 <p id="js--amount-sailboat">0</p>
                 <p>€</p>
                 <p id="js--price2">0</p>
@@ -50,6 +75,7 @@
             <div class="checkout__item">
                 <img src="img/squidHat.webp" alt="Keychain sized crocheted squid with hat" class="checktout__img">
                 <p class="checkout__title">Keychain Squid With Hat</p>
+                <figure class="shoppingCart__variatie variant__squid3"></figure>
                 <p id="js--amount-squid">0</p>
                 <p>€</p>
                 <p id="js--price3">0</p>
@@ -57,17 +83,21 @@
             <div class="checkout__item">
                 <img src="img/lamb.webp" alt="Large sized crocheted lamb" class="checktout__img">
                 <p class="checkout__title">Large Lamb</p>
+                <figure class="shoppingCart__variatie variant__lamb"></figure>
                 <p id="js--amount-lamb">0</p>
                 <p>€</p>
                 <p id="js--price4">0</p>
             </div>
             <div class="checkout__total">
-                <p>Total:</p>
+                <p>Shipping costs: €4,99 + Items = Total:</p>
                 <p>€</p>
                 <p id="js--checkout-total">0</p>
             </div>
-            <button id="js--checkout__close" class="checkout__close">Close</button>
-            <button id="js--checkout__close" class="checkout__close">Checkout</button>
+            <div class="checkout__buttons">
+                <button id="js--checkout__close" class="checkout__close">Close</button>
+                <button id="js--checkout__close" class="checkout__close">Checkout</button>
+            </div>
+            
         </section>
         
         <article class="modal" id="js--shoppingModal">
@@ -80,100 +110,100 @@
         </button>
         <div id="js--productoverview" class="productOverview">
             <section class="filter--inputs">
-                <!--<div>
-                    <input id="checkbox-interactive" type="checkbox" class="filter">
-                    <label for="checkbox-interactive" class="label">Interactive Items</label>
-                </div> -->
-                <div>
-                    <input id="checkbox-largePlush" type="checkbox" class="filter">
-                     <label for="checkbox-largePlush" class="label">Large sized plush</label>
+                <h2 class="filter__title">Product Categories</h2>
+                <div id="js-dropdown" class="dropdown">
+                    <button  id="js--dropdownButton" class="dropbtn">Filter</button>
+                    <div id="js--dropdownOptions" class="dropdown-content">
+                        <a id="js--dropdown-price1" href="#">€0.01-€9.99</a>
+                        <a id="js--dropdown-price2" href="#">€10-€14.99</a>
+                        <a id="js--dropdown-price3" href="#">€15-€20</a>
+                        <a id="js--dropdown-all" href="#">All</a>
+                        <a id="js--dropdown-close" href="#">Close</a>
                 </div>
-                <div>
-                    <input id="checkbox-mediumPlush" type="checkbox" class="filter">
-                    <label for="checkbox-mediumPlush" class="label">Medium sized plush</label>
-                </div>
-                <div>
-                    <input id="checkbox-smallPlush" type="checkbox" class="filter">
-                    <label for="checkbox-smallPlush" class="label">Small sized plush</label>
-                </div>
-                <div>
-                    <input id="checkbox-keychain" type="checkbox" class="filter">
-                    <label for="checkbox-keychain" class="label">Keychain</label>
-                </div>
+                <article class="giveaway__overview">
+                    <img class="giveaway__overviewimg" src="img/squirrel.webp" alt="">
+                    <h4>Enter giveaway here!</h4>
+                    <button id="js--giveawayButton" class="giveaway__overviewButton">Enter</button>
+                </article>
             </section>
 
                 <ul class="products">
                     <li class="product" data-category="keychain">
-                        <h4>Bulbasaur</h4>
-                        <img class="product__image" src="img/bulbasaur.webp" alt="Keychain sized crocheted Bulbasaur">
+                        <h4 id="js--name1">Unknown</h4>
+                        <img id="js--img1" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>6</p>
+                            <p id="js--price1">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__bulb"></li>
                         </ul>
-                        <button class="product__addCart">Returning Soon</button>
+                        <button class="product__return">Returning Soon</button>
                         <p class="product__amount">0 in storage</p>
                     </li>
+                    
                     <li class="product" data-category="mediumPlush">
-                        <h4>Cat-ctus</h4>
-                        <img class="product__image" src="img/catctus.webp" alt="Medium sized crocheted cactus with cat ears">
+                        <h4 id="js--name2">Unknown</h4>
+                        <img id="js--img2" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>15</p>
+                            <p id="js--price2">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__catctus"></li>
                         </ul>
-                        <button class="product__addCart">Returning Soon</button>
+                        <button class="product__return">Returning Soon</button>
                         <p class="product__amount">0 in storage</p>
                     </li>
+
                     <li class="product" data-category="smallPlush">
-                        <h4>Charmander</h4>
-                        <img id="js--img" class="product__image" src="img/charmander.webp" alt="Small sized crocheted Charmander">
+                        <h4 id="js--name3">Unknown</h4>
+                        <img id="js--img3" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p id="js--text">10</p>
+                            <p id="js--price3">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__char"></li>
                         </ul>
-                        <button class="product__addCart">Returning Soon</button>
+                        <button class="product__return">Returning Soon</button>
                         <p class="product__amount">0 in storage</p>
                     </li>
+
                     <li class="product" data-category="keychain">
-                        <h4>Chicken</h4>
-                        <img class="product__image" src="img/chicken.webp" alt="Keychain sized crocheted redbrown chicken">
+                        <h4 id="js--name4">Unknown</h4>
+                        <img id="js--img4" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>6</p>
+                            <p id="js--price4">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__chick"></li>
                         </ul>
-                        <button class="product__addCart">Returning Soon</button>
+                        <button class="product__return">Returning Soon</button>
                         <p class="product__amount">0 in storage</p>
                     </li>
+
                     <li class="product" data-category="smallPlush">
-                        <h4>Giraffe</h4>
-                        <img class="product__image" src="img/giraffe.webp" alt="Small sized crocheted giraffe">
+                        <h4 id="js--name5">Unknown</h4>
+                        <img id="js--img5" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>10</p>
+                            <p id="js--price5">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__gir"></li>
                         </ul>
-                        <button class="product__addCart">Returning Soon</button>
+                        <button class="product__return">Returning Soon</button>
                         <p class="product__amount">0 in storage</p>
                     </li>
+
                     <li class="product" data-category="largePlush">
-                        <h4>Lamb</h4>
-                        <img class="product__image" src="img/lamb.webp" alt="Large sized crocheted lamb">
+                        <h4 id="js--name6">Unknown</h4>
+                        <img id="js--img6" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>20</p>
+                            <p id="js--price6">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__lamb"></li>
@@ -183,11 +213,11 @@
                     </li>
 
                     <li class="product" data-category="smallPlush">
-                        <h4>Mushroom</h4>
-                        <img class="product__image" src="img/mushroomPink.webp" alt="Small sized crocheted blue mushroom">
+                        <h4 id="js--name7">Unknown</h4>
+                        <img id="js--img7" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>10</p>
+                            <p id="js--price7">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__mush1"></li>
@@ -196,30 +226,31 @@
                         </ul>
                         <div class="buttons">
                             <a class="moreMushroom" href="productPagina1.html">Learn More</a>
-                            <button data-product="mushroom"class="product__addCart product__more">Add to cart</button>
+                            <button data-product="mushroom" class="product__addCart mushroom__addCart">Add to cart</button>
                         </div>
                         <p class="product__amount">3 in storage</p>
                     </li>
                     
                     <li class="product" data-category="mediumPlush">
-                        <h4>Rose Turtle</h4>
-                        <img class="product__image" src="img/roseTurtle.webp" alt="Medium sized crocheted purple rose turtle">
+                        <h4 id="js--name8">Unknown</h4>
+                        <img id="js--img8" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>15</p>
+                            <p id="js--price8">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__turtle"></li>
                         </ul>
-                        <button class="product__addCart">Returning Soon</button>
+                        <button class="product__return">Returning Soon</button>
                         <p class="product__amount">0 in storage</p>
                     </li>
+
                     <li class="product" data-category="smallPlush">
-                        <h4>Sailboat</h4>
-                        <img class="product__image" src="img/sailboat.webp" alt="Small sized crocheted blue sailboat">
+                        <h4 id="js--name9">Unknown</h4>
+                        <img id="js--img9" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>10</p>
+                            <p id="js--price9">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__sail"></li>
@@ -229,11 +260,11 @@
                     </li>
 
                     <li class="product" data-category="keychain">
-                        <h4>Squid</h4>
-                        <img class="product__image" src="img/squidHat.webp" alt="Keychain sized crocheted green squid">
+                        <h4 id="js--name10">Unknown</h4>
+                        <img id="js--img10" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>6</p>
+                            <p id="js--price10">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__squid1"></li>
@@ -241,36 +272,37 @@
                             <li class="product__variant variant__squid3"></li>
                         </ul>
                         <div class="buttons">
-                            <a class="'moreSquid" href="productPagina2.html">Learn More</a>
-                            <button data-product="squid" class="product__addCart product__more">Add to cart</button>
+                            <a class="moreSquid" href="productPagina2.html">Learn More</a>
+                            <button data-product="squid" class="product__addCart squid__addCart">Add to cart</button>
                         </div>
                         <p class="product__amount">5 in storage</p>
                     </li>
 
                     <li class="product" data-category="smallPlush">
-                        <h4>Squirtle</h4>
-                        <img class="product__image" src="img/squirtle.webp" alt="Small sized crocheted Squirtle">
+                        <h4 id="js--name11">Unknown</h4>
+                        <img id="js--img11" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>10</p>
+                            <p id="js--price11">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__squirtle"></li>
                         </ul>
-                        <button class="product__addCart">Returning Soon</button>
+                        <button class="product__return">Returning Soon</button>
                         <p class="product__amount">0 in storage</p>
                     </li>
+
                     <li class="product" data-category="keychain">
-                        <h4>Koala</h4>
-                        <img class="product__image" src="img/koala.webp" alt="Keychain sized crocheted koala">
+                        <h4 id="js--name12">Unknown</h4>
+                        <img id="js--img12" class="product__image" src="" alt="">
                         <div class="price">
                             <p>	&#x20AC;</p>
-                            <p>6</p>
+                            <p id="js--price12">0</p>
                         </div>
                         <ul class="product__variants">
                             <li class="product__variant variant__koala"></li>
                         </ul>
-                        <button class="product__addCart">Returning Soon</button>
+                        <button class="product__return">Returning Soon</button>
                         <p class="product__amount">0 in storage</p>
                     </li>
                 </ul>
@@ -284,19 +316,20 @@
                 <h1>Stitches and Loops</h1>
             </article>
             <article class="footer__shopSocials">
-                <i class="fa-brands fa-instagram fa-2xl">
-                    <a href="https://www.instagram.com/stitches.and_loops/" target="_blank"></a>
-                </i>
+                <a href="https://www.instagram.com/stitches.and_loops/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                </a>
                 <i class="fa-brands fa-youtube fa-2xl"></i>
                 <i class="fa-brands fa-facebook fa-2xl"></i>
             </article>
-            
-        </section>
-        <section class="footer__shop">
             <article class="footer__email">
                 <h3>Contact</h3>
-                <p>Email: <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a></p>
+                <p>Email:</p>
+                <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a>
             </article>
+        </section>
+        <section class="footer__shop">
+            
             <article class="shop__products">
                 <a href="productOverview1.html">Shop</a>
             </article>
@@ -330,6 +363,7 @@
             </article>
         </section>
         <section class="developer">
+            <img class="developer__img" src="img/DeveloperLogo.webp" alt="Web developer logo A and P forming a dog">
             <article>
                 <h2>Web Developer</h2>
                 <h3>Astrid Prins</h3>

@@ -37,6 +37,7 @@
             <div class="checkout__item">
                 <img src="img/mushroomPink.webp" alt="Small sized crocheted pink mushroom" class="checktout__img">
                 <p class="checkout__title">Small Pink Mushroom</p>
+                <figure class="shoppingCart__variatie variant__mush3"></figure>
                 <p id="js--amount-mushroom">0</p>
                 <p>€</p>
                 <p id="js--price1">0</p>
@@ -44,6 +45,7 @@
             <div class="checkout__item">
                 <img src="img/sailboat.webp" alt="Small sized crocheted sailboat" class="checktout__img">
                 <p class="checkout__title">Small Blue Sailboat</p>
+                <figure class="shoppingCart__variatie variant__sail"></figure>
                 <p id="js--amount-sailboat">0</p>
                 <p>€</p>
                 <p id="js--price2">0</p>
@@ -51,6 +53,7 @@
             <div class="checkout__item">
                 <img src="img/squidHat.webp" alt="Keychain sized crocheted squid with hat" class="checktout__img">
                 <p class="checkout__title">Keychain Squid With Hat</p>
+                <figure class="shoppingCart__variatie variant__squid3"></figure>
                 <p id="js--amount-squid">0</p>
                 <p>€</p>
                 <p id="js--price3">0</p>
@@ -58,16 +61,20 @@
             <div class="checkout__item">
                 <img src="img/lamb.webp" alt="Large sized crocheted lamb" class="checktout__img">
                 <p class="checkout__title">Large Lamb</p>
+                <figure class="shoppingCart__variatie variant__lamb"></figure>
                 <p id="js--amount-lamb">0</p>
                 <p>€</p>
                 <p id="js--price4">0</p>
             </div>
             <div class="checkout__total">
-                <p>Total:</p>
+                <p>Shipping costs: €4,99 + Items = Total:</p>
                 <p>€</p>
                 <p id="js--checkout-total">0</p>
             </div>
-            <button id="js--checkout__close" class="checkout__close">Close</button>
+            <div class="checkout__buttons">
+                <button id="js--checkout__close" class="checkout__close">Close</button>
+                <button id="js--checkout__close" class="checkout__close">Checkout</button>
+            </div>
         </section>
         
         <article class="modal" id="js--shoppingModal">
@@ -77,21 +84,34 @@
             <i class="fa-solid fa-bag-shopping"></i>
             <p class="shoppingCart__message">0</p>
         </button>
-        <section id="js--productoverview" >
+        <section id="js--productoverview" class="mushroom__section">
             <div class="squid__heading">
                 <img id="js--squidImg" src="img/squid.webp" alt="" class="squid__image">
-            <article class="squid__info">
-                <h2 id="js--squidName">Squid</h2>
-                <ul class="squid__variants">
-                    <li id="js--squidGreen" class="squid__variant squid__color1"></li>
-                    <li id="js--squidPurple" class="squid__variant squid__color2"></li>
-                    <li id="js--squidHat" class="squid__variant squid__color3"></li>
-                </ul>
-                <h3 class="squid__price">€ 6,-</h3>
-                <button data-product="squid" class="product__addCart product__more productPagina__addCart">Add to cart</button>
-            </article>
+                <article class="squid__info">
+                    <h2 id="js--squidName">Squid</h2>
+                    <ul class="squid__variants">
+                        <li id="js--squidGreen" class="squid__variant squid__color1"></li>
+                        <li id="js--squidPurple" class="squid__variant squid__color2"></li>
+                        <li id="js--squidHat" class="squid__variant squid__color3"></li>
+                    </ul>
+                    <h3 class="squid__price">€ 6,-</h3>
+                    <button data-product="squid" class="product__addCart product__more productPagina__addCart">Add to cart</button>
+                </article>
             </div>
-            
+            <article class="mushroom__description">
+                <p>This lovely small squid has been handcrafted with a 100% cotton and filled with a 100% wool and love.
+                </p>
+                <p>
+                    The normal version measures around 5cm/2 inches tall and the top hat version measures around 8cm/3 inches tall.
+                </p>
+                <p>
+                    The normal version is available in the colors green and purple, 
+                    the top hat version is only in the pink and green colors available.
+                </p>
+                <p>
+                    Octopus pattern by All From Jade and Top Hat pattern by Club Crochet.
+                </p>
+            </article>
             
         </section>
     </main>
@@ -103,19 +123,20 @@
                 <h1>Stitches and Loops</h1>
             </article>
             <article class="footer__shopSocials">
-                <i class="fa-brands fa-instagram fa-2xl">
-                    <a href="https://www.instagram.com/stitches.and_loops/" target="_blank"></a>
-                </i>
+                <a href="https://www.instagram.com/stitches.and_loops/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                </a>
                 <i class="fa-brands fa-youtube fa-2xl"></i>
                 <i class="fa-brands fa-facebook fa-2xl"></i>
             </article>
-            
-        </section>
-        <section class="footer__shop">
             <article class="footer__email">
                 <h3>Contact</h3>
-                <p>Email: <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a></p>
+                <p>Email:</p>
+                <a href="mailto:stitchesandloops2023@gmail.com">stitchesandloops2023@gmail.com</a>
             </article>
+        </section>
+        <section class="footer__shop">
+            
             <article class="shop__products">
                 <a href="productOverview1.html">Shop</a>
             </article>
@@ -149,6 +170,7 @@
             </article>
         </section>
         <section class="developer">
+            <img class="developer__img" src="img/DeveloperLogo.webp" alt="Web developer logo A and P forming a dog">
             <article>
                 <h2>Web Developer</h2>
                 <h3>Astrid Prins</h3>

@@ -1,0 +1,61 @@
+{
+    "name1": "Bulbasaur",
+    "alt1": "Keychain sized crocheted Bulbasaur",
+    "price1": "6",
+    "img1": "img/bulbasaur.webp",
+
+    "name2": "Cat-ctus",
+    "alt2": "Medium sized crocheted cactus with cat ears",
+    "price2": "15",
+    "img2": "img/catctus.webp",
+    
+    "name3": "Charmander",
+    "alt3": "Small sized crocheted Charmander",
+    "price3": "10",
+    "img3": "img/charmander.webp",
+
+    "name4": "Chicken",
+    "alt4": "Keychain sized crocheted redbrown chicken",
+    "price4": "6",
+    "img4": "img/chicken.webp",
+
+    "name5": "Giraffe",
+    "alt5": "Small sized crocheted giraffe",
+    "price5": "10",
+    "img5": "img/giraffe.webp",
+
+    "name6": "Lamb",
+    "alt6": "Large sized crocheted lamb",
+    "price6": "20",
+    "img6": "img/lamb.webp",
+
+    "name7": "Mushroom",
+    "alt7": "Small sized crocheted blue mushroom",
+    "price7": "10",
+    "img7": "img/mushroomPink.webp",
+
+    "name8": "Rose Turtle",
+    "alt8": "Medium sized crocheted purple rose turtle",
+    "price8": "15",
+    "img8": "img/roseTurtle.webp",
+
+    "name9": "Sailboat",
+    "alt9": "Small sized crocheted blue sailboat",
+    "price9": "10",
+    "img9": "img/sailboat.webp",
+
+    "name10": "Squid",
+    "alt10": "Keychain sized crocheted green squid",
+    "price10": "6",
+    "img10": "img/squidHat.webp",
+
+    "name11": "Squirtle",
+    "alt11": "Small sized crocheted Squirtle",
+    "price11": "10",
+    "img11": "img/squirtle.webp",
+
+    "name12": "Koala",
+    "alt12": "Keychain sized crocheted koala",
+    "price12": "6",
+    "img12": "img/koala.webp"
+}
