@@ -42,6 +42,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .giveaway__image{
@@ -607,7 +608,7 @@ main{
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    border: 0.3rem solid black;
+    border: 0.3rem double black;
     padding: 2rem;
 }
 
@@ -1251,6 +1252,9 @@ footer{
         gap: 2rem;
         font-size: 80%;
     }
+    .giveaway__overview{
+        display: none;
+    }
     .products{
         width: auto;
     }
@@ -1260,6 +1264,7 @@ footer{
     }
     .checkout{
         width: 50rem;
+        height: 100rem;
     }
     .checkout__item{
         width: 100%;
@@ -1287,7 +1292,6 @@ footer{
     }
     .product__addCart{
         font-size: 80%;
-        width: 15rem;
     }
     .product__addCart:hover{
         background: black;

@@ -156,7 +156,7 @@ checkoutButton.onclick = function(){
         document.getElementById("js--priceSailboat").innerHTML = sailboatTotal;
         document.getElementById("js--priceSquid").innerHTML = squidTotal;
         document.getElementById("js--priceLamb").innerHTML = lambTotal;
-        document.getElementById("js--checkout-total").innerHTML = mushroomTotal + sailboatTotal + squidTotal + lambTotal + 4.99;
+        document.getElementById("js--checkout-total").innerHTML = mushroomTotal + sailboatTotal + squidTotal + lambTotal;
         return;
     }
 }
@@ -219,7 +219,7 @@ const price12 = document.getElementById("js--price12");
 const name12 = document.getElementById("js--name12");
 
 //data
-let data = fetch("../producten.json").then(
+let data = fetch("https://35829.hosts2.ma-cloud.nl/StitchesandLoops/producten.json").then(
     function(binnenGekomenData){
         return binnenGekomenData.json();
     }).then(

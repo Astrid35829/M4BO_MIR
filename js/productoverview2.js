@@ -227,7 +227,7 @@ const price12 = document.getElementById("js--price12");
 const name12 = document.getElementById("js--name12");
 
 //data
-let data = fetch("../producten.json").then(
+let data = fetch("https://35829.hosts2.ma-cloud.nl/StitchesandLoops/producten.json").then(
     function(binnenGekomenData){
         return binnenGekomenData.json();
     }).then(
